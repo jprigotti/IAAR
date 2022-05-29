@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAAR</title>
+
+    <!-- Link CSS local styles -->
+    <link rel="stylesheet" href="./CSS/style.css">
+
+    <!-- Link Fontawesome -->
+    <script src="https://kit.fontawesome.com/628afeffd4.js" crossorigin="anonymous"></script>
+
+    <!-- Link VUE -->
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+    <!-- NAVBAR FROM BOOTSTAP -->
+    
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid d-flex align-items-start">
+          <a class="navbar-brand" href="#"><span class="navbarImg"><img src="./images/IAAR.png" alt="Logo CaC"></span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse align-items-end" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Institucional</a>
+              </li>
+              <li class="nav-item navLink1">
+                <a class="nav-link " href="#">Publicaciones</a>
+                <ul class="dropDown1">
+                    <li><a class="dropdown-item" href="#">Científicas</a></li>
+                    <li><a class="dropdown-item" href="#">Entrevistas</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Restauración-Conservación</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Exposciones Virtuales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contacto</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <!-- SHOWCASE-->
+
+    <section class="showcase">
+        <div class="parallax">
+            <div class="shadow">
+                <div class="container-flex">
+                    <div class="showcaseContent">
+                        <h1>IAAR</h1>
+                        <p>El Instituto de Arte Americano y Regional depende de la Facultad de Artes de la Universidad
+                            Nacional de Tucumán de la República Argentina y es el organismo capacitado para entender
+                            sobre
+                            tareas de investigación, docencia y extensión universitaria en los campos de la Historia del
+                            Arte, la Estética y las Artes Visuales, dentro del marco geográfico específico de América,
+                            la
+                            República Argentina en general y el Noroeste Argentino en particular.</p>
+                        <div class="buttonarea">
+                            <a class="btnTransparent" href="#">Continuá leyendo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPEAKERS -->
+    <section class="speakers" id="speakers">
+        <div class="containerColumn">
+
+            <h2>PUBLICACIONES</h2>
+            <div class="separator"></div>
+            <h5>Explorá nuestras publicaciones</h5>
+
+        <div class="container-speakers">
+            <div class="card">
+                <!-- <img src="./images/steve.jpg" alt="Steve Jobs"> -->
+                <iframe width="400" height="350" src="https://www.youtube.com/embed/_FzPlyW7Of8"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="skills">
+                    <h6 class="cyan">Directora</h6>
+                    <h6 class="yellow">ARAOZ, Silvina Beatriz. </h6>
+
+                </div>
+                <h3>PANORAMAS URBANOS DEL NOROESTE ARGENTINO REPRESENTADO POR ARTISTAS VIAJEROS.</h3>
+                <p>Autoría: Araoz, Silvina B. Evento y organizadores: “1as Jornadas La Ciudad y Los Otros: Miradas e
+                    Imágenes Urbanas en Los Relatos De Viajeros”. Instituto de Arte Americano e Investigaciones
+                    Estéticas “Mario J. Buschiazzo” (FADU, UBA). Lugar y Fecha de Publicación: Buenos Aires, lunes 26 y
+                    martes 27 de octubre de 2015. </p>
+            </div>
+            <div class="card">
+                <img src="./images/bill.jpg" alt="Bill Gates">
+                <div class="skills">
+                    <h6 class="yellow">JavaScript</h6>
+                    <h6 class="cyan">React</h6>
+                </div>
+                <h3>Bill Gates</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, expedita pariatur officiis dicta
+                    tempore repellat!</p>
+            </div>
+            <div class="card">
+                <img src="./images/ada.jpeg" alt="Ada Lovelace">
+                <div class="skills">
+                    <h6 class="grey">Negocios</h6>
+                    <h6 class="magenta">Startups</h6>
+                </div>
+                <h3>Ada Lovelace</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, expedita pariatur officiis dicta
+                    tempore repellat!</p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- EXPOSICIONES VIRTUALES -->
+
+    <section class="callToAction">
+        <div class="parallax2">
+            <div class="shadow">
+                <div class="containerColumn">
+                    <div class="content">
+                        <h1>EXPOSICIONES VIRTUALES</h1>
+                        <div class="separator"></div>
+                        <p>Descubrí nuestras exposiciones</p>
+                        <div class="buttonarea">
+                            <!-- <a class="btn btn-transparent" href="#">Continuá leyendo</a> -->
+                            <a class="btnTransparent" href="#">Ingresa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACTANOS -->
+    <section class="contactForm" id="contactForm">
+        <div class="containerColumn">
+            <div class="content">
+                <h2>CONTACTANOS</h2>
+                <div class="separator"></div>
+                <h5>Completa y envia el formulario, te contactaremos a la brevedad</h5>
+            </div>
+            <div>
+                <form action="">
+                    <div class="containerForm">
+                        <input type="text" class="inputFirstName" name="firstName" placeholder="Nombre">
+                        <input type="text" class="inputLastName" name="lastName" placeholder="Apellido">
+                        <input type="text" class="inputEmail" name="email" placeholder="E-mail">
+                        <textarea class="inputMessage" name="inputNessage" id="" cols="30" rows="6"
+                            placeholder="Dejanos tu mensaje" required></textarea>
+                        <input class="btnSolid" type="submit" value="Enviar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="containerFooter">
+            <div class="gridFooter">
+                <div class="footerLogo">
+                    <img src="./images/IAAR.png" alt="">
+                </div>
+                <div class="footerSocial">
+                    <p>Medios</p>
+                    <ul>
+                        <li><a href="www.facebook.com"><span><i class="fa-brands fa-facebook"></i></span>  Facebook</a></li>
+                        <li><a href="www.instagram.com"><span><i class="fa-brands fa-instagram"></i></span>  Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="footerNav">
+                    <ul>
+                        <li><a href="">Publicaciones</a></li>
+                        <li><a href="">Restauración - Conservación</a></li>
+                        <li><a href="">Exposiciones Virtuales</a></li>
+                        <li><a href="">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Link CSS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Loading jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Parallax JS -->
+    <script src="parallax.js"></script>
+
+</body>
+
+</html>
