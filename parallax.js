@@ -7,22 +7,30 @@ window.onload = function () {
   // navNode.append(spanNode);
 }
 
+// MEDIA QUERY //
+
 window.addEventListener('resize', function (event) {
   let newWidth = window.innerWidth;
 
-  if (newWidth < 992){
+if (newWidth<576){
+  $(".navbar").css({
+    backgroundColor: `rgba(52,58,64,1)`
+  });
+}
+
+
+  if (newWidth < 992) {
     $(".navbarImg").css({
       display: "none",
     });
-  }else{
+  } else {
     console.log("mostrar IMG");
     $(".navbarImg").css({
       display: "contents",
     });
-    
   }
 });
-  
+
 
 $(window).scroll(function () {
   //Código para el parallax del Showcase
@@ -72,11 +80,13 @@ $(window).scroll(function () {
   // });
 
 
-
+if (window.innerWidth > 576){
   $(".navbar").css({
     backgroundColor: `rgba(52,58,64, ${2 * a / b})`
   });
+}
 });
+
 
 // Parallax 2 ArtGallery
 $(window).scroll(function () {
@@ -90,8 +100,10 @@ $(window).scroll(function () {
     var distanceFromBottom = offset - scroll - screenHeight
 
     if (offset > screenHeight && offset) {
+      // $(this).css('background-position', 'center ' + ((distanceFromBottom) * 0.3) + 'px'); Original Line
       $(this).css('background-position', 'center ' + ((distanceFromBottom) * 0.3) + 'px');
     } else {
+      // $(this).css('background-position', 'center ' + ((-scroll) * 0.3) + 'px'); Original Line
       $(this).css('background-position', 'center ' + ((-scroll) * 0.3) + 'px');
     }
   })

@@ -439,6 +439,22 @@ padding-top: 5px;
 
 /* MEDIA QUERIES LG 992*/
 @media(max-width: 992px) {
+
+  /* NAVBAR FROM BOOTSTAP */
+
+
+
+/* SHOWCASE */
+
+
+/* SPEAKERS */
+
+/*EXPOSICIONES VIRTUALES */
+  .parallax2 {
+    background-image: url(../images/galeriaArte_16x9_1000.jpg);
+  }
+
+
   .showcase .showcaseContent {
     width: 100%;
     margin-bottom: 20vh;
@@ -458,7 +474,27 @@ padding-top: 5px;
 }
 
 /* MEDIA QUERIES MD 768*/
+
 @media(max-width: 768px) {
+
+  /* NAVBAR FROM BOOTSTAP */
+/* Para darle el tamaño inicial a la imagen */
+.navbarImg img{
+display: none;
+}
+
+
+/* SHOWCASE */
+
+
+/* SPEAKERS */
+
+/* EXPOSICIONES VIRTUALES */
+
+/* CONTACTANOS */
+
+/* FOOTER */
+
   .container-cta {
     display: flex;
     flex-direction: column;
@@ -514,6 +550,23 @@ padding-top: 5px;
 
 /* MEDIA QUERIES SM 576*/
 @media(max-width: 576px) {
+
+/* NAVBAR FROM BOOTSTAP */
+
+
+
+/* SHOWCASE */
+
+
+/* SPEAKERS */
+
+/* EXPOSICIONES VIRTUALES */
+
+/* CONTACTANOS */
+
+/* FOOTER */
+
+
   .showcase .buttonarea {
     display: flex;
     flex-direction: column;
