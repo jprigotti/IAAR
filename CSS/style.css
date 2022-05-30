@@ -207,6 +207,7 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
 
 .publicaciones .card {
   width: 30%;
+  min-width: 350px;
   height: 500px;
   cursor: pointer;
  }
