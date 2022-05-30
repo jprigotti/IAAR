@@ -3,9 +3,62 @@ window.onload = windowWidthChange;
 $(window).scroll(windowWidthChange);
 window.addEventListener('resize', windowWidthChange);
 
-function loadPage(){
-  alert("Load detected");
+
+var allCards = document.querySelectorAll('.card');
+for (var i = 0; i < allCards.length; i++) {
+    var self = allCards[i];
+
+    self.addEventListener('mouseover', function (evento) {  
+        // prevent browser's default action
+        evento.preventDefault();
+
+        // call your awesome function here
+        cardDisplay(this.className.slice(5, 10)); // 'this' refers to the current button on for loop
+    }, false);
+
 }
+
+var allCards = document.querySelectorAll('.card');
+for (var i = 0; i < allCards.length; i++) {
+    var self = allCards[i];
+
+    self.addEventListener('mouseleave', function (evento) {  
+      // prevent browser's default action
+      evento.preventDefault();
+
+      // call your awesome function here
+      cardHide(this.className.slice(5, 10)); // 'this' refers to the current button on for loop
+  }, false);
+}
+
+function cardDisplay(card){
+  $(`.${card} .author`).css({
+    display: "contents",
+  });
+//   cardTitle=document.querySelector(`.${card} .author`);
+// cardTitle.classList.remove('hidden');
+// setTimeout(function () {
+//   cardTitle.classList.remove('visuallyhidden');
+// }, 20);
+}
+
+function cardHide(card){
+  $(`.${card} .author`).css({
+    display: "none",
+  });
+  // cardTitle=document.querySelector(`.${card} .author`);
+// cardTitle.classList.add('visuallyhidden');    
+// cardTitle.addEventListener('transitionend', function(e) {
+//   cardTitle.classList.add('hidden');
+// }, {
+//   capture: false,
+//   once: true,
+//   passive: false
+// });
+
+}
+
+
 
 function windowWidthChange(evento) {
   let imgHeight = document.querySelector(".showcase");
@@ -191,3 +244,10 @@ function compressDrowpdownMenu() {
 //     display: "none"
 //   });
 // }
+
+
+
+  
+
+
+  

@@ -23,48 +23,48 @@ html {
   scroll-behavior: smooth;
 }
 
-body a{
+body a {
   text-decoration: none;
 }
-body ul{
+
+body ul {
   padding: 0;
 }
-body li{
-list-style: none;
+
+body li {
+  list-style: none;
 }
 
 /* NAVBAR FROM BOOTSTAP */
 
-.navbar{
-
-}
+.navbar {}
 
 /*El es container principal dentro del Nav */
-.container-fluid{
-width: 90% !important;
+.container-fluid {
+  width: 90% !important;
 
 }
 
 /* Div container del nav menu */
-#navbarNavDropdown{
-
-}
+#navbarNavDropdown {}
 
 /* Para darle el tamaño inicial a la imagen */
-.navbarImg img{
+.navbarImg img {
   width: 100px;
 }
 
 /* La class del ul */
 .navbar .navbar-nav {
   /*height: 20px; para que el nav-item no se mueve al expandir el dropdown-menu */
-  text-align: center; /*para que los items queden alineados en el menú hamburguesa */
+  text-align: center;
+  /*para que los items queden alineados en el menú hamburguesa */
   margin-top: 1rem;
-} 
+}
 
 .nav-item .nav-link {
   color: var(--gray-100) !important;
-  margin-right: 1rem; /*separamos un poquito los nav items*/
+  margin-right: 1rem;
+  /*separamos un poquito los nav items*/
   margin-bottom: 1rem;
 }
 
@@ -73,31 +73,37 @@ width: 90% !important;
 }
 
 /*ocultamos el dropdown menu 1 al cargar la web*/
-.dropDown1{
+.dropDown1 {
   display: none;
 }
 
 /*le aplicamos estilo a los sub-items*/
-.dropDown1 li{
-color:var(--gray-100);
-background-color: var(--footerColor);
-padding: 0.5rem;
+.dropDown1 li {
+  color: var(--gray-100);
+  background-color: var(--footerColor);
+  padding: 0.5rem;
 }
 
 
 /* SHOWCASE */
 .showcase {
-  position: relative; /*para que funcione el parallax*/
-  height: 100vh; /*se podria omitir, porque la imagen le esta dando el alto, pero si la imagen no carga es mejor ponerlo */
-  overflow: hidden; /**/
+  position: relative;
+  /*para que funcione el parallax*/
+  height: 100vh;
+  /*se podria omitir, porque la imagen le esta dando el alto, pero si la imagen no carga es mejor ponerlo */
+  overflow: hidden;
+  /**/
   font-size: 1rem;
   color: var(--gray-200);
 }
 
 .parallax {
-  position: relative; /*para que funcione el parallax*/
-  background-image: url(../images/lolaMora.jpg); /*cargamos la imagen del parallax*/
-  background-size: cover;  /*le damos formato cover*/
+  position: relative;
+  /*para que funcione el parallax*/
+  background-image: url(../images/lolaMora.jpg);
+  /*cargamos la imagen del parallax*/
+  background-size: cover;
+  /*le damos formato cover*/
   background-repeat: no-repeat;
   height: 100vh;
 }
@@ -184,23 +190,13 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
   transition: 0.5s;
 }
 
-/* SPEAKERS */
+/* PUBLICACIONES */
 
-.speakers{
+.publicaciones {
   margin: 3rem;
 }
 
-.speakers .title {
-  text-align: center;
-}
-
-.title h6 {
-  margin-top: 1rem;
-  margin-bottom: 0;
-}
-
-
-.speakers .container-speakers {
+.container-publicaciones {
   /* width: 70%; */
   /* margin: 0 auto; */
   display: flex;
@@ -209,65 +205,95 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
 
 }
 
-.speakers .card {
+.publicaciones .card {
   width: 30%;
-  min-width: 300px;
-}
+  height: 500px;
+  cursor: pointer;
+ }
 
-.speakers .card img {
+.cardShadow{
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
+  height: 100%;
 }
 
-.speakers .card :not(img) {
-  padding: 0 1rem;
+.cardContent{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  color: var(--gray-100);
+  padding: 0.5rem;
 }
 
-.card .skills {
-  margin-top: 1rem;
+.cardContent .range h6{
+  padding:0.2rem;
+  margin-right: 0.5rem;
+}
+
+.card ul{
+  margin: 0;
+  padding: 0;
+}
+
+.title{
+  font-size: 1.1rem;
+}
+
+
+.card .author{
+  display: none;
+  }
+
+.author p{
+  font-size: 0.8rem;
+}
+
+
+
+.card1 {
+  background-image: url(../images/steve.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.card2 {
+  background-image: url(../images/bill.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.card3 {
+  background-image: url(../images/ada.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card .range {
   display: flex;
 }
 
-.card .skills h6 {
-  font-size: 0.8rem;
-  font-weight: 700;
-  padding: 0.3rem;
-  margin-right: 0.5rem;
-  margin-bottom: 0;
-
-}
-
-.card h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  padding: 0.3rem;
-}
-
-.card p {
-  font-size: 0.8rem;
-  font-weight: 400;
-  padding: 0.3rem;
-  margin-bottom: 1rem;
-}
-
-
-.card .skills .yellow {
+.card .range .yellow {
   background-color: rgb(255, 187, 0);
   border-radius: 5px;
 }
 
-.card .skills .cyan {
+.card .range .cyan {
   background-color: rgb(0, 195, 255);
   color: white;
   border-radius: 5px;
 }
 
-.card .skills .grey {
+.card .range .grey {
   background-color: grey;
   color: white;
   border-radius: 5px;
 }
 
-.card .skills .magenta {
+.card .range .magenta {
   background-color: rgb(161, 18, 49);
   color: white;
   border-radius: 5px;
@@ -285,7 +311,7 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 50vh;
+  height: 45vh;
   color: var(--gray-200);
 }
 
@@ -362,7 +388,7 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
   height: 250px;
 }
 
-.gridFooter{
+.gridFooter {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1;
@@ -386,16 +412,19 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
   justify-content: flex-start;
 }
 
-.footerSocial a, .footerNav a{
+.footerSocial a,
+.footerNav a {
   font-size: 0.9rem;
   color: var(--gray-200);
 }
 
-.footerSocial li, .footerNav li{
-padding-top: 5px;
+.footerSocial li,
+.footerNav li {
+  padding-top: 5px;
 }
 
-.footerSocial a:hover, .footerNav a:hover{
+.footerSocial a:hover,
+.footerNav a:hover {
   color: #c2a476;
 }
 
@@ -444,12 +473,12 @@ padding-top: 5px;
 
 
 
-/* SHOWCASE */
+  /* SHOWCASE */
 
 
-/* SPEAKERS */
+  /* SPEAKERS */
 
-/*EXPOSICIONES VIRTUALES */
+  /*EXPOSICIONES VIRTUALES */
   .parallax2 {
     background-image: url(../images/galeriaArte_16x9_1000.jpg);
   }
@@ -484,61 +513,65 @@ padding-top: 5px;
 @media(max-width: 768px) {
 
   /* NAVBAR FROM BOOTSTAP */
-/* Para darle el tamaño inicial a la imagen */
-.navbarImg img{
-display: none;
-}
+  /* Para darle el tamaño inicial a la imagen */
+  .navbarImg img {
+    display: none;
+  }
 
 
-/* SHOWCASE */
+  /* SHOWCASE */
 
 
-/* SPEAKERS */
+  /* SPEAKERS */
 
-/* EXPOSICIONES VIRTUALES */
+  /* EXPOSICIONES VIRTUALES */
+  .parallax2 {
+    height: 30vh;
+    background-image: url(../images/galeriaArte_16x9_1000.jpg);
+  }
 
-/* CONTACTANOS */
+  /* CONTACTANOS */
 
-.containerColumn {
-  width: 90%;
-  /* height: 100%;
+  .containerColumn {
+    width: 90%;
+    /* height: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; */
-}
+  }
 
-/* FOOTER */
+  /* FOOTER */
 
-.containerFooter {
-  width: 90%;
-  height: 220px;
-}
+  .containerFooter {
+    width: 90%;
+    height: 220px;
+  }
 
-.footerLogo img {
-  width: 70px;
-}
+  .footerLogo img {
+    width: 70px;
+  }
 
-.footerLogo {
-  width: 70vw;
-  grid-column: 1 / span 3;
-  grid-row: 1;
-}
+  .footerLogo {
+    width: 70vw;
+    grid-column: 1 / span 3;
+    grid-row: 1;
+  }
 
-.footerSocial {
-  grid-column: 5 / span 5;
-  grid-row: 1;
-  margin-top: 2rem;
-  justify-content: flex-start;
-}
+  .footerSocial {
+    grid-column: 5 / span 5;
+    grid-row: 1;
+    margin-top: 2rem;
+    justify-content: flex-start;
+  }
 
-.footerNav {
-  grid-column: 9 / span 10;
-  grid-row: 1;
-  margin-top: 1.5rem;
-  justify-content: flex-start;
-}
+  .footerNav {
+    grid-column: 9 / span 10;
+    grid-row: 1;
+    margin-top: 1.5rem;
+    justify-content: flex-start;
+  }
 
   .container-cta {
     display: flex;
@@ -575,27 +608,31 @@ display: none;
     width: 80vw;
   }
 
-  
+
 }
 
 
 /* MEDIA QUERIES SM 576*/
 @media(max-width: 576px) {
 
-/* NAVBAR FROM BOOTSTAP */
+  /* NAVBAR FROM BOOTSTAP */
 
 
 
-/* SHOWCASE */
+  /* SHOWCASE */
 
 
-/* SPEAKERS */
+  /* SPEAKERS */
 
-/* EXPOSICIONES VIRTUALES */
+  /* EXPOSICIONES VIRTUALES */
+  .parallax2 {
+    height: 30vh;
+    background-image: url(../images/galeriaArte_16x9_720.jpg);
+  }
 
-/* CONTACTANOS */
+  /* CONTACTANOS */
 
-/* FOOTER */
+  /* FOOTER */
 
 
   .showcase .buttonarea {
