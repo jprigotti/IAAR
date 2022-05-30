@@ -473,6 +473,12 @@ padding-top: 5px;
 
 }
 
+/* CONTACTANOS */
+
+
+
+/* FOOTER */
+
 /* MEDIA QUERIES MD 768*/
 
 @media(max-width: 768px) {
@@ -493,7 +499,46 @@ display: none;
 
 /* CONTACTANOS */
 
+.containerColumn {
+  width: 90%;
+  /* height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
 /* FOOTER */
+
+.containerFooter {
+  width: 90%;
+  height: 220px;
+}
+
+.footerLogo img {
+  width: 70px;
+}
+
+.footerLogo {
+  width: 70vw;
+  grid-column: 1 / span 3;
+  grid-row: 1;
+}
+
+.footerSocial {
+  grid-column: 5 / span 5;
+  grid-row: 1;
+  margin-top: 2rem;
+  justify-content: flex-start;
+}
+
+.footerNav {
+  grid-column: 9 / span 10;
+  grid-row: 1;
+  margin-top: 1.5rem;
+  justify-content: flex-start;
+}
 
   .container-cta {
     display: flex;
@@ -530,21 +575,7 @@ display: none;
     width: 80vw;
   }
 
-  .footer {
-    background-image: linear-gradient(to bottom, #004d7a, #008793);
-  }
-
-  .footer .container-footer {
-    flex-direction: column;
-    padding: 1rem 0;
-  }
-
-  .footer .container-footer a {
-    padding: 0.5rem 0;
-    width: 100%;
-    text-align: center;
-  }
-
+  
 }
 
 
@@ -573,20 +604,6 @@ display: none;
     justify-content: center;
   }
 
-  .tickets-form .ticketsFirstName,
-  .ticketsLastName {
-    width: 100%;
-  }
 
-
-  .tickets-form .labelTicketsQuantity,
-  .labelTicketsCategory {
-    width: 100%;
-  }
-
-  .tickets-form .btnTickets {
-    width: 100%;
-
-  }
 
 }
