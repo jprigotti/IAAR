@@ -1,91 +1,127 @@
 // for heading
-window.onload = function () {
-  // let navNode = document.querySelector(".navbar-brand");
-  // let spanNode = document.createElement("span");
-  // spanNode.innerHTML = `<span class="navbarImg"><img src="./images/IAAR.png" alt="Logo CaC"></span>`;
-  // spanNode.className = 'navbarImg';
-  // navNode.append(spanNode);
+window.onload = windowWidthChange;
+$(window).scroll(windowWidthChange);
+window.addEventListener('resize', windowWidthChange);
+
+function loadPage(){
+  alert("Load detected");
 }
 
-// MEDIA QUERY //
-
-window.addEventListener('resize', function (event) {
-  let newWidth = window.innerWidth;
-
-if (newWidth<576){
-  $(".navbar").css({
-    backgroundColor: `rgba(52,58,64,1)`
-  });
-}
-
-
-  if (newWidth < 992) {
-    $(".navbarImg").css({
-      display: "none",
-    });
-  } else {
-    console.log("mostrar IMG");
-    $(".navbarImg").css({
-      display: "contents",
-    });
-  }
-});
-
-
-$(window).scroll(function () {
-  //Código para el parallax del Showcase
+function windowWidthChange(evento) {
   let imgHeight = document.querySelector(".showcase");
-
   const
     a = $(this).scrollTop(),
     b = imgHeight.offsetHeight;
-  // console.log(`a= ${a}, b= ${b}, a/b)${a / b}`);
+    console.log(`a is ${a}`)
 
-  $(".parallax").css({
-    top: a / 1.6 + "px",
-    //opacity:  1 - a / b
-  });
+    
+  // MEDIA QUERY < 576//
+  if (window.innerWidth < 576) {
 
-  // Este código agrega o remueve una clase dependiendo del scroll en pantalla
-  // let navNode = document.querySelector(".navbar-brand");
-  // let spanNode = document.createElement("span");
-  // spanNode.innerHTML = `<span class="navbarImg order-1"><a href="./code.html" target="_blank"><img src="./images/IAAR.png" alt="Logo CaC"></a></span>`;
-  // spanNode.className = 'navbarImg';
-  // if (a < 600) {
-  //   if (!document.querySelector(".navbarImg")) navNode.append(spanNode);
+    //Remove Logo Image
+    $(".navbarImg").css({
+      display: "none",
+    });
 
-  // } else {
-  //   if (document.querySelector(".navbarImg")) document.querySelector(".navbarImg").remove();
-  // }
+    // document.querySelector(".navbar-brand").textContent= "IAAR";
 
-  //
-  $(".navbarImg img").css({
-    width: `${100 * (1 - (a / b))}`,
-    transform: `translateX(-${a / 3}px)`
-  });
+    //Update Navbar shadow
+    $(".navbar").css({
+      backgroundColor: `rgba(52,58,64, 1)`
+    });
+
+    //Código para el parallax del Showcase
+    $(".parallax").css({
+      top: "0 px",
+    });
 
 
-  $(".parallax").css({
-    top: a / 1.6 + "px",
-    //opacity:  1 - a / b
-  });
 
-  $(".showcase .shadow").css({
-    // backgroundColor: `rgba(73,80,87, ${2*(a/b)})`
-  });
+  } else if (window.innerWidth < 992) {
+  // MEDIA QUERY < 992//
 
-  // $(".content").css({
-  //   bottom: a * 0.5 + "px",
-  //   //opacity: 1 - a / b 
-  // });
+    //Remove Logo Image
+    $(".navbarImg").css({
+      display: "none",
+    });
+
+    //Update Navbar shadow
+    $(".navbar").css({
+      backgroundColor: `rgba(52,58,64, 1)`
+    });
+    
+    //Código para el parallax del Showcase
+    $(".parallax").css({
+      top: a / 1.6 + "px",
+    });
+
+  } else {
+  // MEDIA QUERY > 992//
+
+     //Add Logo Image
+    $(".navbarImg").css({
+      display: "contents",
+    });
+
+      $(".parallax").css({
+        top: a / 1.6 + "px",
+      });
 
 
-if (window.innerWidth > 576){
-  $(".navbar").css({
-    backgroundColor: `rgba(52,58,64, ${2 * a / b})`
-  });
+      $(".navbar img").css({
+        width: `${100 * (1 - (a / b))}`,
+        transform: `translateX(-${a / 3}px)`
+      });
+
+
+      $(".navbar").css({
+        backgroundColor: `rgba(52,58,64, ${2 * a / b})`
+      });
+
+  }
 }
-});
+
+
+
+
+// $(window).scroll(function () {
+//   //Código para el parallax del Showcase
+//   let imgHeight = document.querySelector(".showcase");
+
+//   const
+//     a = $(this).scrollTop(),
+//     b = imgHeight.offsetHeight;
+//   // console.log(`a= ${a}, b= ${b}, a/b)${a / b}`);
+
+//   $(".parallax").css({
+//     top: a / 1.6 + "px",
+//   });
+
+
+//   $(".navbarImg img").css({
+//     width: `${100 * (1 - (a / b))}`,
+//     transform: `translateX(-${a / 3}px)`
+//   });
+
+
+//   $(".parallax").css({
+//     top: a / 1.6 + "px",
+
+//   });
+
+//   $(".showcase .shadow").css({
+
+//   });
+
+
+
+// if (window.innerWidth > 576){
+//   $(".navbar").css({
+//     backgroundColor: `rgba(52,58,64, ${2 * a / b})`
+//   });
+// }
+
+// });
 
 
 // Parallax 2 ArtGallery
