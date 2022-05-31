@@ -478,8 +478,19 @@ margin: 0px 0.5rem;
 
 .footerLogo {
 display: flex;
+flex-direction: column;
 align-items: center;
+justify-content: center;
 }
+
+.footerLogoSocial{
+margin: 1rem ;
+}
+
+.footerLogoSocial a{
+  margin: 0 0.3rem ;
+  color: var(--gray-200);
+  }
 
 .footerSocial {
   display: flex;
@@ -572,6 +583,9 @@ margin-top: 1rem;
 
 
 /* FOOTER */
+.footerLogoSocial{
+  display: none;
+}
 
 /* MEDIA QUERIES MD 768*/
 
@@ -611,7 +625,10 @@ margin-top: 1rem;
 
   .containerFooter {
     width: 90%;
+  }
 
+  .footerLogoSocial{
+    display: none;
   }
 
   .footerLogo img {
@@ -689,6 +706,19 @@ margin-top: 1rem;
   /* CONTACTANOS */
 
   /* FOOTER */
+  .footerSocial{
+    display: none;
+  }
+
+  .footerLogo img {
+margin-top: 1rem;
+    }
+
+  .footerLogoSocial{
+    display: contents;
+    display: flex;
+  }
+
 
 
   .showcase .buttonarea {
