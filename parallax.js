@@ -59,6 +59,20 @@ function cardHide(card){
 }
 
 
+// Codigo para el scroll del Carousel
+const fila = document.querySelector(".containerCarousel");
+
+const leftArrow = document.querySelector("#leftArrow");
+const rightArrow = document.querySelector("#rightArrow");
+
+rightArrow.addEventListener("click", () => {
+  fila.scrollLeft += fila.offsetWidth;
+})
+
+leftArrow.addEventListener("click", () => {
+  fila.scrollLeft -= fila.offsetWidth;
+})
+
 
 function windowWidthChange(evento) {
   let imgHeight = document.querySelector(".showcase");
@@ -88,6 +102,10 @@ function windowWidthChange(evento) {
       top: "0 px",
     });
 
+    $(".publicaciones .card").css({
+      minWidth: "100%"
+    });
+  
 
 
   } else if (window.innerWidth < 992) {
@@ -106,6 +124,10 @@ function windowWidthChange(evento) {
     //Código para el parallax del Showcase
     $(".parallax").css({
       top: a / 1.6 + "px",
+    });
+
+    $(".publicaciones .card").css({
+      minWidth: "50%"
     });
 
   } else {
@@ -129,6 +151,10 @@ function windowWidthChange(evento) {
 
       $(".navbar").css({
         backgroundColor: `rgba(52,58,64, ${2 * a / b})`
+      });
+
+      $(".publicaciones .card").css({
+        minWidth: "33.33%"
       });
 
   }
