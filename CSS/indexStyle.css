@@ -703,8 +703,12 @@ margin-top: 1rem;
 
   /* EXPOSICIONES VIRTUALES */
   .parallax2 {
-    height: 30vh;
+    height: 40vh;
     background-image: url(../images/galeriaArte_16x9_720.jpg);
+  }
+
+  .exposicionesVirtuales .content{
+    padding: 0.2rem 0;
   }
 
 .exposicionesVirtuales .content h1{
