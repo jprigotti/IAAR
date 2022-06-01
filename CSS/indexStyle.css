@@ -617,12 +617,6 @@ margin-top: 1rem;
 
   .containerColumn {
     width: 90%;
-    /* height: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   }
 
   /* FOOTER */
@@ -725,6 +719,12 @@ margin-top: 1rem;
 }
 
   /* CONTACTANOS */
+
+  .containerForm .inputFirstName,
+  .inputLastName {
+    width: 100%;
+    padding: 0.4rem 0.7rem;
+  }
 
   /* FOOTER */
   .footerSocial{
