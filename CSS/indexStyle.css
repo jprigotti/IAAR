@@ -726,6 +726,10 @@ margin-top: 1rem;
 
   /* CONTACTANOS */
 
+  .contactForm {
+    margin: 3rem 0;
+  }
+
   .containerForm .inputFirstName,
   .inputLastName {
     width: 100%;
