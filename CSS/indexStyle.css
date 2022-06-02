@@ -348,7 +348,7 @@ margin: 0px 0.5rem;
 }
 
 .card1, .card2, .card3, .card4, .card5, .card6, .card9 {
-  background-image: url(../images/silvia_araoz.jpg);
+  /* background-image: url(../images/silvia_araoz.jpg); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
