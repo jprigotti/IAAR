@@ -35,9 +35,17 @@ body li {
   list-style: none;
 }
 
+.separador {
+  background-color: #c2a476;
+  height: 1px;
+  width: 100px;
+  margin: 2rem auto;
+}
+
 /* NAVBAR FROM BOOTSTAP */
 
 .navbar {
+  background-color: rgba(52,58,64, 1);
 }
 
 /*El es container principal dentro del Nav */
@@ -91,8 +99,62 @@ body li {
 
 
 /* MAIN */
-.main {
-height: 100vh;
+.institucional {
+margin-top: 8rem;
+}
+
+.institucional .container{
+width: 70%;
+max-width: 1000px;
+}
+
+.contenido h1, h2{
+  text-align: center;
+}
+
+.contenido h2{
+margin-bottom: 1rem;
+}
+
+.contenido p{
+  text-indent: 50px;
+text-align: justify;
+}
+
+.autoridades{
+  width: 100%;
+margin-bottom: 3rem;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+justify-content: center;
+}
+
+.autoridades h3{
+  margin-top: 1.5rem;
+ margin-bottom: 0.3rem;
+ margin-left: 3rem;
+font-size: 1.3rem;
+font-weight: 600;
+color: var(--gray-600);
+}
+
+.autoridades p{
+  margin: 0 0 0 4rem;
+  padding: 0;
+}
+
+.autoridades .email{
+  display: inline-block;
+}
+
+.autoridades .email a{
+  color: var(--gray-600);
+  margin-left: 0.5rem;
+}
+
+.autoridades .email a:hover{
+  color: #c2a476;
 }
 
 
@@ -326,22 +388,28 @@ margin-top: 1rem;
 /* MEDIA QUERIES SM 576*/
 @media(max-width: 576px) {
 
-  /* NAVBAR FROM BOOTSTAP */
+/* INSTITUCIONAL */
 
-
-
-  /* SHOWCASE */
-
-
-  /* SPEAKERS */
-
-  /* EXPOSICIONES VIRTUALES */
-  .parallax2 {
-    height: 30vh;
-    background-image: url(../images/galeriaArte_16x9_720.jpg);
+.institucional .container{
+  width: 90%;
   }
 
-  /* CONTACTANOS */
+  .autoridades h3{
+    margin-top: 1.5rem;
+   margin-bottom: 0.3rem;
+   margin-left: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  }
+  
+  .autoridades p{
+    margin: 0 0 0 2rem;
+    padding: 0;
+  }
+
+
+    /* CONTACTANOS */
 
   /* FOOTER */
   .footerSocial{
