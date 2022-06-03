@@ -306,10 +306,37 @@ function compressDrowpdownMenu() {
 // }
 
 // CODIGO PARA EL FORM DE CONTACT
-// let formSubmit = document.querySelector("#formSubmit");
-// formSubmit.addEventListener("click", formSubmit({
+$('form.ajax').on('submit', function(){
+let that = $(this),
+url = that.attr('action'),
+method = that.attr('method'),
+data = {}; //this is gonna be a JS object holding data
 
-// }));
+//Loop through all the elements in the Form
+
+that.find('[name]').each(function(index,value){
+  var that = $(this),
+  name = that.attr('name'),
+  value = that.val();
+
+  data[name] = value;
+
+  console.log(data);
+})
+
+$.ajax({
+  method: method,
+  url: url,
+  dataType: 'json',
+  accepts: 'application/json',
+  data: data,
+  success: (data) => console.log(data),
+  error: (err) => console.log(err)
+});
+
+return false;
+
+});
 
 
 
