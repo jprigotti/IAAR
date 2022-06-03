@@ -225,27 +225,34 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
   display: flex;
   align-items: center;
   position: relative;
+
 }
 
 .mainContainer .leftArrow,
 .mainContainer .rightArrow {
   position: absolute;
   border: none;
-  background: rgba(0, 0, 0, 0.3);
-  font-size: 40px;
+  background: rgba(194, 164, 118, 0.7);
+ /* Por default
+ font-size: 40px;
   height: 20%;
-  top: calc(50% - 10%);
   line-height: 40px;
+  width: 50px; */
+
   width: 50px;
-  color: var(--gray-200);
+  height: 50px;
+  font-size: 30px;
+  top: calc(50% - 10%);
+  color: var(--gray-100);
   cursor: pointer;
   z-index: 500;
   transform: .2s ease all;
+  border-radius: 50%;
 }
 
 .mainContainer .leftArrow:hover,
 .mainContainer .rightArrow:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(194, 164, 118, 0.3);
   color: #c2a476;
 }
 
@@ -260,6 +267,7 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
 
 .containerCarousel {
   width: 100%;
+  height: 600px;
   padding: 1rem 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -268,34 +276,47 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
 .containerCarousel .carousel {
   display: flex;
   flex-wrap: nowrap;
-
+  height: auto;
 }
 
 .publicaciones .card {
-  min-width: 50%;
-  height: 550px;
-
+  /* min-width: 50%; */
+  height: 100%;
   cursor: pointer;
   transition: 0.3s ease all;
+  border: none;
 }
 
-.cardShadow {
-  /* background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)); */
-  /* background-color: rgba(0, 0, 0, 0.5); */
-  width: 100%;
-  height: 100%;
+.publicaciones .card:hover {
+  transform: scale(1.02);
+  }
 
-}
 
-.cardContent {
+.containerCard {
+    /* background-color: rgba(0, 0, 0, 0.1); */
   width: 100%;
   height: 100%;
   display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+}
+
+.cardContent {
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)); */
+  width: 90%;
+  height: 90%;
+  
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: flex-start;
   color: var(--gray-900);
   padding: 0.5rem;
+  /* border: 1px solid #c2a476; */
+  /* border-top: 30px solid #c2a476; */
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
 
 
@@ -321,7 +342,12 @@ margin: 0px 0.5rem;
 }
 
 .title {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+ /* border: 1px solid var(--gray-700); */
+  padding: 0.5rem;
+  border-radius: 5px;
+  /* height: 100%; */
 }
 
 
@@ -334,17 +360,17 @@ margin: 0px 0.5rem;
 }
 
 .cardMore a{
-  color: #c2a476
+  color: var(--gray-700)
 }
 .cardMore a:hover{
-  color: var(--gray-100);
+  color: #c2a476;
   transform: scale(0.8);
 }
 
 .cardMore a:hover::after{
   font: var(--fa-font-solid);
   content: "\f178";
-  color: var(--gray-100);
+  color: #c2a476
 }
 
 .card1, .card2, .card3, .card4, .card5, .card6, .card9 {
@@ -362,12 +388,12 @@ margin: 0px 0.5rem;
 .card .range {
   display: flex;
   align-items: center;
-  border: 1px solid #c2a476;
+  border-radius: 5px;
 }
 
 .card .range .yellow {
-  background-color: #c2a476;
-
+color: #c2a476;
+border-radius: 5px;
 }
 
 .card .range .cyan {
@@ -386,6 +412,10 @@ margin: 0px 0.5rem;
   background-color: rgb(161, 18, 49);
   color: white;
   border-radius: 5px;
+}
+
+.card .description{
+  padding: 0.5rem;
 }
 
 /* EXPOSICIONES VIRTUALES */
@@ -429,17 +459,20 @@ margin: 0px 0.5rem;
   margin: 1rem;
 }
 
-.separatorCard1 {
+.separatorCard {
   background-color: #184E77;
-  height: 50px;
-  width: 350px;
+  height: 25px;
+  width: 97%;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
   display: block;
-  margin: 1rem;
+  align-self: center;
+
 }
 .separatorCard2 {
   background-color: #1E6091;
-  height: 50px;
-  width: 350px;
+  height: 5%;
+  width: 95%;
   display: block;
   margin: 1rem;
 }

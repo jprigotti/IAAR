@@ -1,8 +1,28 @@
+//Declaracion de variabels
+let paletaColores = ["B5E48C", "99D98C", "76C893", "52B69A", "34A0A4", "168AAD", "1A759F", "1E6091", "184E77"];
+
+
 // for heading
 window.onload = windowWidthChange;
+window.onload = updateCarouselSeparator;
 $(window).scroll(windowWidthChange);
 window.addEventListener('resize', windowWidthChange);
 
+//Update the paleta de colores
+function updateCarouselSeparator(){
+var allCards = document.querySelectorAll('.card');
+let paletaIndex = 0;
+for (var i = 0; i < allCards.length; i++) {
+  var self = allCards[i];
+
+  $(`.${self.className.slice(5, 11)} .separatorCard`).css({
+    backgroundColor: `#${paletaColores[paletaIndex]}`,
+  });
+
+  paletaIndex+=1;
+if (paletaIndex == paletaColores.length) paletaIndex=0;
+}
+}
 
 var allCards = document.querySelectorAll('.card');
 for (var i = 0; i < allCards.length; i++) {
@@ -18,6 +38,8 @@ for (var i = 0; i < allCards.length; i++) {
 
 }
 
+
+
 var allCards = document.querySelectorAll('.card');
 for (var i = 0; i < allCards.length; i++) {
   var self = allCards[i];
@@ -32,30 +54,15 @@ for (var i = 0; i < allCards.length; i++) {
 }
 
 function cardDisplay(card) {
-  $(`.${card} .author`).css({
+  $(`.${card} .targetClass`).css({
     display: "contents",
   });
-  //   cardTitle=document.querySelector(`.${card} .author`);
-  // cardTitle.classList.remove('hidden');
-  // setTimeout(function () {
-  //   cardTitle.classList.remove('visuallyhidden');
-  // }, 20);
 }
 
 function cardHide(card) {
-  $(`.${card} .author`).css({
+  $(`.${card} .targetClass`).css({
     display: "none",
   });
-  // cardTitle=document.querySelector(`.${card} .author`);
-  // cardTitle.classList.add('visuallyhidden');    
-  // cardTitle.addEventListener('transitionend', function(e) {
-  //   cardTitle.classList.add('hidden');
-  // }, {
-  //   capture: false,
-  //   once: true,
-  //   passive: false
-  // });
-
 }
 
 
@@ -272,10 +279,6 @@ let navLink = document.querySelector(".navLink1");
 navLink.addEventListener("mouseover", expandDrowpdownMenu);
 navLink.addEventListener("mouseleave", compressDrowpdownMenu);
 
-// // let navBarSubMenu = document.querySelector(".navBarSubMenu .nav-link");
-// let navBarSubMenu = document.querySelector(".navBarSubMenu");
-// navBarSubMenu.addEventListener("mouseover", expandSubMenu);
-// navBarSubMenu.addEventListener("mouseleave", compressSubMenu);
 
 function expandDrowpdownMenu() {
   $(".dropDown1").css({
@@ -302,9 +305,11 @@ function compressDrowpdownMenu() {
 //   });
 // }
 
+// CODIGO PARA EL FORM DE CONTACT
+// let formSubmit = document.querySelector("#formSubmit");
+// formSubmit.addEventListener("click", formSubmit({
 
-
-
+// }));
 
 
 
