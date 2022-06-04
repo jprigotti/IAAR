@@ -1,5 +1,6 @@
 //Declaracion de variabels
-let paletaColores = ["B5E48C", "99D98C", "76C893", "52B69A", "34A0A4", "168AAD", "1A759F", "1E6091", "184E77"];
+// let paletaColores = ["B5E48C", "99D98C", "76C893", "52B69A", "34A0A4", "168AAD", "1A759F", "1E6091", "184E77"];
+let paletaColores = ["005F73", "0A9396", "94D2BD", "E9D8A6", "EE9B00", "CA6702", "BB3E03", "AE2012", "9B2226"];
 
 
 // for heading
@@ -9,19 +10,19 @@ $(window).scroll(windowWidthChange);
 window.addEventListener('resize', windowWidthChange);
 
 //Update the paleta de colores
-function updateCarouselSeparator(){
-var allCards = document.querySelectorAll('.card');
-let paletaIndex = 0;
-for (var i = 0; i < allCards.length; i++) {
-  var self = allCards[i];
+function updateCarouselSeparator() {
+  var allCards = document.querySelectorAll('.card');
+  let paletaIndex = 0;
+  for (var i = 0; i < allCards.length; i++) {
+    var self = allCards[i];
 
-  $(`.${self.className.slice(5, 11)} .separatorCard`).css({
-    backgroundColor: `#${paletaColores[paletaIndex]}`,
-  });
+    $(`.${self.className.slice(5, 11)} .separatorCard`).css({
+      backgroundColor: `#${paletaColores[paletaIndex]}`,
+    });
 
-  paletaIndex+=1;
-if (paletaIndex == paletaColores.length) paletaIndex=0;
-}
+    paletaIndex += 1;
+    if (paletaIndex == paletaColores.length) paletaIndex = 0;
+  }
 }
 
 var allCards = document.querySelectorAll('.card');
@@ -157,10 +158,10 @@ function windowWidthChange(evento) {
     });
 
 
-      $(".navbar img").css({
-        width: `${100 * (1 - (a / b))}`,
-        transform: `translateX(-${a / 3}px)`
-      });
+    $(".navbar img").css({
+      width: `${100 * (1 - (a / b))}`,
+      transform: `translateX(-${a / 3}px)`
+    });
 
     $(".navbar").css({
       backgroundColor: `rgba(52,58,64, ${2 * a / b})`
@@ -170,7 +171,7 @@ function windowWidthChange(evento) {
       minWidth: "33.33%"
     });
 
-  } else{
+  } else {
     // MEDIA QUERY > 992//
 
     $(".navbarImg").css({
@@ -182,15 +183,15 @@ function windowWidthChange(evento) {
     });
 
 
-      $(".navbar img").css({
-        width: `${100 * (1 - (a / b))}`,
-        transform: `translateX(-${a / 3}px)`
-      });
+    $(".navbar img").css({
+      width: `${100 * (1 - (a / b))}`,
+      transform: `translateX(-${a / 3}px)`
+    });
 
     $(".navbar").css({
       backgroundColor: `rgba(52,58,64, ${2 * a / b})`
     });
-    
+
     $(".publicaciones .card").css({
       minWidth: "25%"
     });
@@ -306,37 +307,60 @@ function compressDrowpdownMenu() {
 // }
 
 // CODIGO PARA EL FORM DE CONTACT
-$('form.ajax').on('submit', function(){
-let that = $(this),
-url = that.attr('action'),
-method = that.attr('method'),
-data = {}; //this is gonna be a JS object holding data
+$('form.ajax').on('submit', function () {
+  let that = $(this),
+    url = that.attr('action'),
+    method = that.attr('method'),
+    data = {}; //this is gonna be a JS object holding data
 
-//Loop through all the elements in the Form
+  //Loop through all the elements in the Form
 
-that.find('[name]').each(function(index,value){
-  var that = $(this),
-  name = that.attr('name'),
-  value = that.val();
+  that.find('[name]').each(function (index, value) {
+    var that = $(this),
+      name = that.attr('name'),
+      value = that.val();
 
-  data[name] = value;
+    data[name] = value;
 
-  console.log(data);
-})
+    console.log(data);
+  })
 
-$.ajax({
-  method: method,
-  url: url,
-  dataType: 'json',
-  accepts: 'application/json',
-  data: data,
-  success: (data) => console.log(data),
-  error: (err) => console.log(err)
+  $.ajax({
+    method: method,
+    url: url,
+    dataType: 'json',
+    accepts: 'application/json',
+    data: data,
+    success: (data) => {
+      document.querySelector("form.ajax").reset();
+      console.log(data);
+      
+    },
+    error: (err) => console.log(err)
+  });
+
+  return false;
+
 });
 
-return false;
-
-});
 
 
+//Update input style
+// var allInput = document.querySelectorAll('.input');
 
+// for (var i = 0; i < allInput.length; i++) {
+//   var self = allInput[i];
+
+//   self.addEventListener("click", function (evento) {
+//     // prevent browser's default action
+//     evento.preventDefault();
+//     updateInputForm(this.className.slice(6, 20));
+//   });
+// }
+
+// function updateInputForm(inputClass){
+// console.log(inputClass);
+//   $(`.input.${inputClass}`).css({
+//     backgroundColor: "#fcfcfc",
+//   });
+// }

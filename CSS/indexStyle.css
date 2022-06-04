@@ -527,6 +527,15 @@ border-radius: 5px;
   padding: 0.4rem 0.7rem;
 }
 
+.ajax input:focus{
+  background-color: #ccc;
+outline: none;
+}
+
+.ajax textarea:focus{
+  background-color: #ccc;
+outline: none;
+}
 
 /* FOOTER */
 
