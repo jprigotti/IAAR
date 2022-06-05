@@ -534,8 +534,10 @@ outline: none;
 
 .ajax textarea:focus{
   background-color: #ccc;
-outline: none;
+ outline: none;
 }
+
+
 
 /* FOOTER */
 

@@ -307,43 +307,83 @@ function compressDrowpdownMenu() {
 // }
 
 // CODIGO PARA EL FORM DE CONTACT
-$('form.ajax').on('submit', function () {
-  let that = $(this),
-    url = that.attr('action'),
-    method = that.attr('method'),
-    data = {}; //this is gonna be a JS object holding data
+$('form.ajax').submit(function (evento) {
 
-  //Loop through all the elements in the Form
+  evento.preventDefault();  // avoid to execute the actual submit of the form.
+  if (inputCheck()) {
 
-  that.find('[name]').each(function (index, value) {
-    var that = $(this),
-      name = that.attr('name'),
-      value = that.val();
+    //Data already validated - proceed to submit using AJAX-SUBMITFORM
+    let that = $(this),
+      url = that.attr('action'),
+      method = that.attr('method'),
+      data = {}; //this is gonna be a JS object holding data
 
-    data[name] = value;
+    //Loop through all the elements in the Form
 
-    console.log(data);
-  })
+    that.find('[name]').each(function (index, value) {
+      var that = $(this),
+        name = that.attr('name'),
+        value = that.val();
 
-  $.ajax({
-    method: method,
-    url: url,
-    dataType: 'json',
-    accepts: 'application/json',
-    data: data,
-    success: (data) => {
-      document.querySelector("form.ajax").reset();
+      data[name] = value;
+
       console.log(data);
-      
-    },
-    error: (err) => console.log(err)
-  });
+    })
 
-  return false;
+    $.ajax({
+      method: method,
+      url: url,
+      dataType: 'json',
+      accepts: 'application/json',
+      data: data,
+      success: (data) => {
+        document.querySelector("form.ajax").reset();
+        console.log(data);
 
+      },
+      error: (err) => console.log(err)
+    });
+
+    return false;
+  }
 });
 
 
+//Function inputCheck, receives the form and returns True ok False error
+function inputCheck() {
+
+  let contactForm = document.querySelector(".ajax");
+  let arrayCheck = []; // este array contiene los valores de cada input y del textarea
+  for (i = 0; i < 4; i++)arrayCheck.push(contactForm[i].value);
+console.log(arrayCheck);
+
+  if (arrayCheck.some((item) => item == "")) {  // pregunto si algun item de arrayChek es null
+    console.log("complete fields");
+    for (i = 0; i < 4; i++) {
+      if (contactForm[i].value == "") {
+        console.log(i);
+        document.querySelector(`.${contactForm[i].className.slice(6, contactForm[i].className.length)}`).style.border = "1px solid red";
+      } else {
+        document.querySelector(`.${contactForm[i].className.slice(6, contactForm[i].className.length)}`).style.border = "none";
+      }
+    }
+    return false;
+
+  } else {
+    // los campos fueron completados, pero hay que validar el email
+
+    for (i = 0; i < 4; i++) document.querySelector(`.${contactForm[i].className.slice(6, contactForm[i].className.length)}`).style.border = "none"; //limpio todos los border red
+
+    if (contactForm[2].value.includes('@') && contactForm[2].value.includes('.')) { // valido que el email ingresado sea valido
+      return true;
+    } else {
+      document.querySelector(`.${contactForm[2].className.slice(6, contactForm[2].className.length)}`).style.border = "1px solid red"; //vuelvo a poner border red
+      return false;
+    }
+
+  }
+
+}
 
 //Update input style
 // var allInput = document.querySelectorAll('.input');
