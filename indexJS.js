@@ -328,7 +328,10 @@ $('form.ajax').submit(function (evento) {
       data[name] = value;
 
       console.log(data);
-    })
+
+    });
+
+
 
     $.ajax({
       method: method,
@@ -339,6 +342,7 @@ $('form.ajax').submit(function (evento) {
       success: (data) => {
         document.querySelector("form.ajax").reset();
         console.log(data);
+        updateSubmitButton();
 
       },
       error: (err) => console.log(err)
@@ -353,37 +357,67 @@ $('form.ajax').submit(function (evento) {
 function inputCheck() {
 
   let contactForm = document.querySelector(".ajax");
+  console.log(contactForm);
   let arrayCheck = []; // este array contiene los valores de cada input y del textarea
   for (i = 0; i < 4; i++)arrayCheck.push(contactForm[i].value);
-console.log(arrayCheck);
+  console.log(arrayCheck);
 
   if (arrayCheck.some((item) => item == "")) {  // pregunto si algun item de arrayChek es null
     console.log("complete fields");
+
     for (i = 0; i < 4; i++) {
-      if (contactForm[i].value == "") {
-        console.log(i);
-        document.querySelector(`.${contactForm[i].className.slice(6, contactForm[i].className.length)}`).style.border = "1px solid red";
+      //declaro variables temporales
+      let inputClassName = contactForm[i].className.slice(6, contactForm[i].className.length);
+      let inputValue = contactForm[i].value;
+      let inputParentClassName = contactForm[i].parentNode.className;
+
+      if (inputValue == "") {
+        document.querySelector(`.${inputClassName}`).style.border = "1px solid red";
+        console.log("input error " + inputParentClassName);
+        document.querySelector(`.${inputParentClassName} .inputError`).textContent = "Debe completar este campo";
       } else {
-        document.querySelector(`.${contactForm[i].className.slice(6, contactForm[i].className.length)}`).style.border = "none";
+        document.querySelector(`.${inputClassName}`).style.border = "none";
+        document.querySelector(`.${inputParentClassName} .inputError`).textContent = "";
       }
     }
+
     return false;
 
   } else {
     // los campos fueron completados, pero hay que validar el email
 
-    for (i = 0; i < 4; i++) document.querySelector(`.${contactForm[i].className.slice(6, contactForm[i].className.length)}`).style.border = "none"; //limpio todos los border red
+    for (i = 0; i < 4; i++) {
+      let inputParentClassName = contactForm[i].parentNode.className;
+      document.querySelector(`.${contactForm[i].className.slice(6, contactForm[i].className.length)}`).style.border = "none"; //limpio todos los border red
+      document.querySelector(`.${inputParentClassName} .inputError`).textContent = "";
+    }
 
     if (contactForm[2].value.includes('@') && contactForm[2].value.includes('.')) { // valido que el email ingresado sea valido
       return true;
     } else {
       document.querySelector(`.${contactForm[2].className.slice(6, contactForm[2].className.length)}`).style.border = "1px solid red"; //vuelvo a poner border red
+      document.querySelector(`.inputAreaEmail .inputError`).textContent = "Debe ingresar un e-mail válido";
       return false;
     }
 
   }
 
 }
+
+//Funcion que actualiza el Submit Button con OK
+function updateSubmitButton() {
+  console.log("updateButton");
+  $("#formSubmit").val("Enviado");
+  $("#formSubmit").addClass("btnSubmit");
+
+  setTimeout(function () {
+    $("#formSubmit").val("Enviar");
+    $("#formSubmit").removeClass("btnSubmit");
+  }, 3000);
+
+}
+
+
 
 //Update input style
 // var allInput = document.querySelectorAll('.input');

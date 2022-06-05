@@ -192,7 +192,6 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
   background-color: var(--gray-600);
   border: 2px solid var(--gray-800);
   color: var(--gray-100);
-  transition: 0.5s;
 }
 
 /* ------------------- PUBLICACIONES --------------------*/
@@ -503,7 +502,7 @@ border-radius: 5px;
   justify-content: space-between;
 }
 
-.containerForm *:not(.btnTransparent, .btnSolid) {
+.containerForm .inputFirstName, .inputLastName, .inputEmail, .inputMessage {
   margin: 0.5rem 0;
   background-color: #f2f2f2;
   border: none;
@@ -515,11 +514,30 @@ border-radius: 5px;
   margin-top: 1rem;
 }
 
-.containerForm .inputFirstName,
-.inputLastName {
-  width: 49%;
+.containerForm .inputAreaFirstName,
+.containerForm .inputAreaLastName{
+ width: 49%;
+}
+
+.containerForm .inputAreaEmail,
+.containerForm .inputAreaText{
+ width: 100%;
+}
+
+.containerForm .inputAreaFirstName .inputFirstName,
+.containerForm .inputAreaLastName .inputLastName{
+  width: 100%;
   padding: 0.4rem 0.7rem;
 }
+
+
+.containerForm .inputError{
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  color: red;
+  margin-bottom: 0;
+}
+
 
 .containerForm .inputEmail,
 .inputMessage {
@@ -537,7 +555,23 @@ outline: none;
  outline: none;
 }
 
+.containerForm .inputError{
+  display: flex;
+  flex-direction: column;
+}
 
+.containerForm .inputArea p{
+  background-color: transparent ;
+}
+
+.contactForm .btnSubmit{
+  background-color : #a3b18a !important;
+  color: var(--gray-100) !important;
+  font-weight: 600;
+  border: none;
+  transition: 0.5s ease-in-out;
+}
+  
 
 /* FOOTER */
 
@@ -807,10 +841,9 @@ margin-top: 1rem;
     margin: 3rem 0;
   }
 
-  .containerForm .inputFirstName,
-  .inputLastName {
-    width: 100%;
-    padding: 0.4rem 0.7rem;
+  .containerForm .inputAreaFirstName,
+  .containerForm .inputAreaLastName{
+   width: 100%;
   }
 
   /* FOOTER */
