@@ -232,12 +232,6 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
   position: absolute;
   border: none;
   background: rgba(194, 164, 118, 0.7);
-  /* Por default
- font-size: 40px;
-  height: 20%;
-  line-height: 40px;
-  width: 50px; */
-
   width: 50px;
   height: 50px;
   font-size: 30px;
@@ -781,7 +775,34 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
   .publicaciones {
     width: 90%;
     margin: 3rem auto;
+  }
 
+  .mainContainer .leftArrow,
+  .mainContainer .rightArrow {
+    position: absolute;
+    border: none;
+    background: rgba(194, 164, 118, 0.7);
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    top: calc(95% - 10%);
+    color: var(--gray-100);
+    cursor: pointer;
+    z-index: 500;
+    transform: .2s ease all;
+    border-radius: 50%;
+  }
+
+  .mainContainer .leftArrow {
+    left: 20px;
+  }
+  
+  .mainContainer .rightArrow {
+    right: 20px;
+  }
+
+  .containerCarousel {
+    height: 600px;
   }
 
   /* EXPOSICIONES VIRTUALES */
