@@ -777,32 +777,28 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
     margin: 3rem auto;
   }
 
+  .mainContainer{
+    padding-top: 2rem;
+  }
   .mainContainer .leftArrow,
   .mainContainer .rightArrow {
-    position: absolute;
-    border: none;
-    background: rgba(194, 164, 118, 0.7);
     width: 30px;
     height: 30px;
     font-size: 20px;
-    top: calc(95% - 10%);
-    color: var(--gray-100);
-    cursor: pointer;
-    z-index: 500;
-    transform: .2s ease all;
-    border-radius: 50%;
+    top: calc(10% - 10%);
+
   }
 
   .mainContainer .leftArrow {
-    left: 20px;
+    left: 30px;
   }
   
   .mainContainer .rightArrow {
-    right: 20px;
+    right: 30px;
   }
 
   .containerCarousel {
-    height: 600px;
+    height: 550px;
   }
 
   /* EXPOSICIONES VIRTUALES */
