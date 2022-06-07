@@ -4,7 +4,17 @@ let paletaColores = ["005F73", "0A9396", "94D2BD", "E9D8A6", "EE9B00", "CA6702",
 
 
 // for heading
-window.onload = windowScrollChange;
+// window.onload = windowWidthChange;
+$(window).on("load", function(){
+  if (window.innerWidth < 992) {
+    //Update Navbar shadow
+    $(".navbar").css({
+      backgroundColor: `rgba(52,58,64, 1)`
+    });
+}
+});
+
+
 window.onload = updateCarouselSeparator;
 $(window).scroll(windowScrollChange);
 window.addEventListener('resize', windowWidthChange);
@@ -103,12 +113,7 @@ function windowScrollChange(evento) {
       display: "none",
     });
 
-      //Update Navbar shadow
-    $(".navbar").css({
-      backgroundColor: `rgba(52,58,64, 1)`
-    });
-
-    //Código para el parallax del Showcase
+       //Código para el parallax del Showcase
     $(".parallax").css({
       top: "0 px",
     });
@@ -166,7 +171,7 @@ function windowScrollChange(evento) {
     });
 
   } else {
-    // MEDIA QUERY > 992//
+    // MEDIA QUERY > 1420//
 
     $(".navbarImg").css({
       display: "contents",
