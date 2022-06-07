@@ -199,7 +199,10 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
 .publicaciones {
   width: 90%;
   margin: 6rem auto;
+}
 
+.publicaciones h5{
+  text-align: center;
 }
 
 /* CONTENEDOR TITULO Y CONTROLES */
@@ -260,7 +263,7 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
 
 .containerCarousel {
   width: 100%;
-  height: 500px;
+  /* height: 500px; */
   padding: 1rem 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -782,9 +785,9 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
   }
   .mainContainer .leftArrow,
   .mainContainer .rightArrow {
-    width: 30px;
-    height: 30px;
-    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    font-size: 25px;
     top: calc(10% - 10%);
 
   }

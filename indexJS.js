@@ -6,7 +6,7 @@ let paletaColores = ["005F73", "0A9396", "94D2BD", "E9D8A6", "EE9B00", "CA6702",
 // for heading
 window.onload = windowWidthChange;
 window.onload = updateCarouselSeparator;
-$(window).scroll(windowWidthChange);
+$(window).scroll(windowScrollChange);
 window.addEventListener('resize', windowWidthChange);
 
 //Update the paleta de colores
@@ -87,6 +87,113 @@ leftArrow.addEventListener("click", () => {
 })
 
 
+function windowScrollChange(evento) {
+  let imgHeight = document.querySelector(".showcase");
+  const
+    a = $(this).scrollTop(),
+    b = imgHeight.offsetHeight;
+  console.log(`a is ${a}`)
+
+
+  // MEDIA QUERY < 576//
+  if (window.innerWidth < 576) {
+
+    //Remove Logo Image
+    $(".navbarImg").css({
+      display: "none",
+    });
+
+      //Update Navbar shadow
+    $(".navbar").css({
+      backgroundColor: `rgba(52,58,64, 1)`
+    });
+
+    //Código para el parallax del Showcase
+    $(".parallax").css({
+      top: "0 px",
+    });
+
+    $(".publicaciones .card").css({
+      minWidth: "100%"
+    });
+
+  } else if (window.innerWidth < 992) {
+    // MEDIA QUERY < 992//
+
+    //Remove Logo Image
+    $(".navbarImg").css({
+      display: "none",
+    });
+
+    //Update Navbar shadow
+    $(".navbar").css({
+      backgroundColor: `rgba(52,58,64, 1)`
+    });
+
+    //Código para el parallax del Showcase
+    $(".parallax").css({
+      top: a / 1.6 + "px",
+    });
+
+    $(".publicaciones .card").css({
+      minWidth: "100%"
+    });
+
+  } else if (window.innerWidth < 1420) {
+    // MEDIA QUERY < 1420//
+
+    //Add Logo Image
+    $(".navbarImg").css({
+      display: "contents",
+    });
+
+    $(".parallax").css({
+      top: a / 1.6 + "px",
+    });
+
+
+    $(".navbar img").css({
+      width: `${100 * (1 - (a / b))}`,
+      transform: `translateX(-${a / 3}px)`
+    });
+
+    $(".navbar").css({
+      backgroundColor: `rgba(52,58,64, ${2 * a / b})`
+    });
+
+    $(".publicaciones .card").css({
+      minWidth: "33.33%"
+    });
+
+  } else {
+    // MEDIA QUERY > 992//
+
+    $(".navbarImg").css({
+      display: "contents",
+    });
+
+    $(".parallax").css({
+      top: a / 1.6 + "px",
+    });
+
+
+    $(".navbar img").css({
+      width: `${100 * (1 - (a / b))}`,
+      transform: `translateX(-${a / 3}px)`
+    });
+
+    $(".navbar").css({
+      backgroundColor: `rgba(52,58,64, ${2 * a / b})`
+    });
+
+    $(".publicaciones .card").css({
+      minWidth: "25%"
+    });
+
+  }
+}
+
+
 function windowWidthChange(evento) {
   let imgHeight = document.querySelector(".showcase");
   const
@@ -103,9 +210,7 @@ function windowWidthChange(evento) {
       display: "none",
     });
 
-    // document.querySelector(".navbar-brand").textContent= "IAAR";
-
-    //Update Navbar shadow
+      //Update Navbar shadow
     $(".navbar").css({
       backgroundColor: `rgba(52,58,64, 1)`
     });
@@ -198,9 +303,6 @@ function windowWidthChange(evento) {
     fila.scrollLeft = 0;
   }
 }
-
-
-
 
 // $(window).scroll(function () {
 //   //Código para el parallax del Showcase
