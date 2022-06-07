@@ -23,7 +23,8 @@ html {
   scroll-behavior: smooth;
 }
 
-body a, .cardMore a {
+body a,
+.cardMore a {
   text-decoration: none;
 }
 
@@ -37,8 +38,7 @@ body li {
 
 /* NAVBAR FROM BOOTSTAP */
 
-.navbar {
-}
+.navbar {}
 
 /*El es container principal dentro del Nav */
 .container-fluid {
@@ -232,7 +232,7 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
   position: absolute;
   border: none;
   background: rgba(194, 164, 118, 0.7);
- /* Por default
+  /* Por default
  font-size: 40px;
   height: 20%;
   line-height: 40px;
@@ -266,7 +266,7 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
 
 .containerCarousel {
   width: 100%;
-  height: 700px;
+  height: 500px;
   padding: 1rem 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -288,24 +288,23 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
 
 .publicaciones .card:hover {
   transform: scale(1.02);
-  }
+}
 
 
 .containerCard {
-    /* background-color: rgba(0, 0, 0, 0.1); */
+  /* background-color: rgba(0, 0, 0, 0.1); */
   width: 100%;
   height: 100%;
   display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .cardContent {
   /* background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)); */
   width: 90%;
   height: 90%;
-  
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -318,104 +317,76 @@ justify-content: space-between;
   border-radius: 5px;
 }
 
-
-.cardContent .range{
-  margin: 0.5rem 0;
-}
-
-.cardContent .range h5{
-padding: 0px;
-margin: 0px;
-padding: 0.2rem;
-color: var(--gray-900);
-}
-
-.cardContent .range h6{
-padding: 0px;
-margin: 0px 0.5rem;
-}
-
 .card ul {
   margin: 0;
   padding: 0;
 }
 
 .title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
- /* border: 1px solid var(--gray-700); */
   padding: 0.5rem;
   border-radius: 5px;
-  /* height: 100%; */
 }
 
+.date {
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+  margin-left: 0.5rem;
+}
 
-.card .author {
-  display: none;
+.range {
+  display: flex;
+  align-items: flex-start;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+
+.range h5 {
+  padding: 0;
+  margin: 0 0.5rem;
+  color: var(--gray-900);
+  font-size: 0.9rem;
+}
+
+.range h6 {
+  padding: 0px;
+  font-size: 0.9rem;
+}
+
+.range .yellow {
+  color: #c2a476;
+}
+
+.description {
+  margin: 0 0.5rem;
+  font-size: 0.8rem;
 }
 
 .author p {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
-.cardMore a{
+.cardMore a {
   color: var(--gray-700)
 }
-.cardMore a:hover{
+
+.cardMore a:hover {
   color: #c2a476;
   transform: scale(0.8);
 }
 
-.cardMore a:hover::after{
+.cardMore a:hover::after {
   font: var(--fa-font-solid);
   content: "\f178";
   color: #c2a476
 }
 
-.card1, .card2, .card3, .card4, .card5, .card6, .card9 {
-  /* background-image: url(../images/publicacionBanner.jpeg); */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.banner {
   height: 200px;
 }
 
-.banner{
-  height: 200px;
-}
 
-.card .range {
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
-}
-
-.card .range .yellow {
-color: #c2a476;
-border-radius: 5px;
-}
-
-.card .range .cyan {
-  background-color: rgb(0, 195, 255);
-  color: white;
-  border-radius: 5px;
-}
-
-.card .range .grey {
-  background-color: grey;
-  color: white;
-  border-radius: 5px;
-}
-
-.card .range .magenta {
-  background-color: rgb(161, 18, 49);
-  color: white;
-  border-radius: 5px;
-}
-
-.card .description{
-  padding: 0.5rem;
-}
 
 /* EXPOSICIONES VIRTUALES */
 
@@ -468,6 +439,7 @@ border-radius: 5px;
   align-self: center;
 
 }
+
 .separatorCard2 {
   background-color: #1E6091;
   height: 5%;
@@ -475,6 +447,7 @@ border-radius: 5px;
   display: block;
   margin: 1rem;
 }
+
 .separatorCard3 {
   background-color: #1A759F;
   height: 50px;
@@ -482,6 +455,7 @@ border-radius: 5px;
   display: block;
   margin: 1rem;
 }
+
 .separatorCard4 {
   background-color: #168AAD;
   height: 50px;
@@ -502,7 +476,10 @@ border-radius: 5px;
   justify-content: space-between;
 }
 
-.containerForm .inputFirstName, .inputLastName, .inputEmail, .inputMessage {
+.containerForm .inputFirstName,
+.inputLastName,
+.inputEmail,
+.inputMessage {
   margin: 0.5rem 0;
   background-color: #f2f2f2;
   border: none;
@@ -515,23 +492,23 @@ border-radius: 5px;
 }
 
 .containerForm .inputAreaFirstName,
-.containerForm .inputAreaLastName{
- width: 49%;
+.containerForm .inputAreaLastName {
+  width: 49%;
 }
 
 .containerForm .inputAreaEmail,
-.containerForm .inputAreaText{
- width: 100%;
+.containerForm .inputAreaText {
+  width: 100%;
 }
 
 .containerForm .inputAreaFirstName .inputFirstName,
-.containerForm .inputAreaLastName .inputLastName{
+.containerForm .inputAreaLastName .inputLastName {
   width: 100%;
   padding: 0.4rem 0.7rem;
 }
 
 
-.containerForm .inputError{
+.containerForm .inputError {
   margin-left: 0.5rem;
   font-size: 0.8rem;
   color: red;
@@ -545,33 +522,33 @@ border-radius: 5px;
   padding: 0.4rem 0.7rem;
 }
 
-.ajax input:focus{
+.ajax input:focus {
   background-color: #ccc;
-outline: none;
+  outline: none;
 }
 
-.ajax textarea:focus{
+.ajax textarea:focus {
   background-color: #ccc;
- outline: none;
+  outline: none;
 }
 
-.containerForm .inputError{
+.containerForm .inputError {
   display: flex;
   flex-direction: column;
 }
 
-.containerForm .inputArea p{
-  background-color: transparent ;
+.containerForm .inputArea p {
+  background-color: transparent;
 }
 
-.contactForm .btnSubmit{
-  background-color : #a3b18a !important;
+.contactForm .btnSubmit {
+  background-color: #a3b18a !important;
   color: var(--gray-100) !important;
   font-weight: 600;
   border: none;
   transition: 0.5s ease-in-out;
 }
-  
+
 
 /* FOOTER */
 
@@ -592,20 +569,20 @@ outline: none;
 
 
 .footerLogo {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.footerLogoSocial{
-margin: 1rem ;
+.footerLogoSocial {
+  margin: 1rem;
 }
 
-.footerLogoSocial a{
-  margin: 0 0.3rem ;
+.footerLogoSocial a {
+  margin: 0 0.3rem;
   color: var(--gray-200);
-  }
+}
 
 .footerSocial {
   display: flex;
@@ -633,7 +610,7 @@ margin: 1rem ;
 
 
 .footerNav {
-margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .footerLogo img {
@@ -698,7 +675,7 @@ margin-top: 1rem;
 
 
 /* FOOTER */
-.footerLogoSocial{
+.footerLogoSocial {
   display: none;
 }
 
@@ -736,7 +713,7 @@ margin-top: 1rem;
     width: 90%;
   }
 
-  .footerLogoSocial{
+  .footerLogoSocial {
     display: none;
   }
 
@@ -744,16 +721,11 @@ margin-top: 1rem;
     width: 70px;
   }
 
-  .footerLogo {
-  }
+  .footerLogo {}
 
-  .footerSocial {
+  .footerSocial {}
 
-  }
-
-  .footerNav {
-
-  }
+  .footerNav {}
 
   .container-cta {
     display: flex;
@@ -809,7 +781,7 @@ margin-top: 1rem;
   .publicaciones {
     width: 90%;
     margin: 3rem auto;
-  
+
   }
 
   /* EXPOSICIONES VIRTUALES */
@@ -818,22 +790,22 @@ margin-top: 1rem;
     background-image: url(../images/galeriaArte_16x9_720.jpg);
   }
 
-  .exposicionesVirtuales .content{
+  .exposicionesVirtuales .content {
     padding: 0.5rem 0;
   }
 
-.exposicionesVirtuales .content h1{
-  text-align: center;
-  font-size: 1.7rem;
-}
+  .exposicionesVirtuales .content h1 {
+    text-align: center;
+    font-size: 1.7rem;
+  }
 
-.exposicionesVirtuales .content .btnTransparent{
-  padding: 0.2rem 0.8rem;
-}
+  .exposicionesVirtuales .content .btnTransparent {
+    padding: 0.2rem 0.8rem;
+  }
 
-.exposicionesVirtuales .content a{
-  font-size: 1rem;
-}
+  .exposicionesVirtuales .content a {
+    font-size: 1rem;
+  }
 
   /* CONTACTANOS */
 
@@ -842,20 +814,20 @@ margin-top: 1rem;
   }
 
   .containerForm .inputAreaFirstName,
-  .containerForm .inputAreaLastName{
-   width: 100%;
+  .containerForm .inputAreaLastName {
+    width: 100%;
   }
 
   /* FOOTER */
-  .footerSocial{
+  .footerSocial {
     display: none;
   }
 
   .footerLogo img {
-margin-top: 1rem;
-    }
+    margin-top: 1rem;
+  }
 
-  .footerLogoSocial{
+  .footerLogoSocial {
     display: contents;
     display: flex;
   }
