@@ -86,14 +86,11 @@ const leftArrow = document.querySelector("#leftArrow");
 const rightArrow = document.querySelector("#rightArrow");
 
 rightArrow.addEventListener("click", () => {
-  console.log(`fila ${fila.offsetWidth}, card ${card.offsetWidth}`)
-  // fila.scrollLeft =+ card.offsetWidth*(fila.offsetWidth/card.offsetWidth);
-  fila.scrollLeft += card.offsetWidth;
+if(Number.isInteger(fila.scrollLeft / card.offsetWidth)) fila.scrollLeft += card.offsetWidth;
 })
 
 leftArrow.addEventListener("click", () => {
-  // fila.scrollLeft =- card.offsetWidth*(fila.offsetWidth/card.offsetWidth);
-  fila.scrollLeft -= card.offsetWidth;
+  if(Number.isInteger(fila.scrollLeft / card.offsetWidth)) fila.scrollLeft -= card.offsetWidth;
 })
 
 
