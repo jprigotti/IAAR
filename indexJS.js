@@ -78,26 +78,38 @@ function cardHide(card) {
 
 
 // Codigo para el scroll del Carousel
+//el metodo scrollLeftMax no funciona en Chrome, entonces lo reemplace con
+// scrollWidth - clientWidth
+// notar que clientWidth equivale a card.offsetWidth * la cantidad de cards en el clientWidth
+// la cantidad de cards se ven en carousel.childElementCount
+
 let fila = document.querySelector(".containerCarousel");
 let card = document.querySelector(".card");
+let carousel = document.querySelector(".carousel") ;
 
+
+let cardOffsetWidth = function(){
+  return(Math.floor(document.querySelector(".containerCarousel").scrollWidth / document.querySelector(".carousel").childElementCount));
+}
+
+let scrollWidhMaxCalc = function(){
+  return(fila.scrollWidth-fila.clientWidth);
+  } 
 
 let leftArrow = document.querySelector(".leftArrow");
 let rightArrow = document.querySelector(".rightArrow");
-let scrollWidhMaxCalc = function(){
-return(fila.scrollWidth-fila.clientWidth);
-} 
+
 
 rightArrow.addEventListener('click', () => {
-  console.log(`scrollLeft ${fila.scrollLeft}`);
-if (Number.isInteger(fila.scrollLeft / card.offsetWidth)) {
-(scrollWidhMaxCalc() - fila.scrollLeft >= card.offsetWidth) ? fila.scrollLeft += card.offsetWidth : fila.scrollLeft = 0;
+console.log(fila.scrollWidth, cardOffsetWidth(), fila.scrollLeft);
+if (Number.isInteger(fila.scrollLeft / cardOffsetWidth())) {
+(scrollWidhMaxCalc() - fila.scrollLeft >= cardOffsetWidth()) ? fila.scrollLeft += cardOffsetWidth() : fila.scrollLeft = 0;
 }
 });
 
 
 leftArrow.addEventListener('click', () => {
-  if (Number.isInteger(fila.scrollLeft / card.offsetWidth)) fila.scrollLeft -= card.offsetWidth;
+  if (Number.isInteger(fila.scrollLeft / cardOffsetWidth())) fila.scrollLeft -= cardOffsetWidth();
 });
 
 
