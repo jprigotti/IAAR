@@ -78,23 +78,21 @@ function cardHide(card) {
 
 
 // Codigo para el scroll del Carousel
-const fila = document.querySelector(".containerCarousel");
-const card = document.querySelector(".card");
+let fila = document.querySelector(".containerCarousel");
+let card = document.querySelector(".card");
 
 
-const leftArrow = document.querySelector("#leftArrow");
-const rightArrow = document.querySelector("#rightArrow");
+let leftArrow = document.querySelector("#leftArrow");
+let rightArrow = document.querySelector("#rightArrow");
 
 rightArrow.addEventListener("click", () => {
-  if (fila.scrollLeft % card.offsetWidth ==0) {
+if (Number.isInteger(fila.scrollLeft / card.offsetWidth)) {
 (fila.scrollLeftMax - fila.scrollLeft >= card.offsetWidth) ? fila.scrollLeft += card.offsetWidth : fila.scrollLeft = 0;
   }
 });
 
 leftArrow.addEventListener("click", () => {
-  console.log("before", fila.scrollLeft, card.offsetWidth);
   if (isInteger(fila.scrollLeft / card.offsetWidth)) fila.scrollLeft -= card.offsetWidth;
-  console.log("after", fila.scrollLeft, card.offsetWidth);
 });
 
 
