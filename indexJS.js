@@ -82,17 +82,19 @@ let fila = document.querySelector(".containerCarousel");
 let card = document.querySelector(".card");
 
 
-let leftArrow = document.querySelector("#leftArrow");
-let rightArrow = document.querySelector("#rightArrow");
+let leftArrow = document.querySelector(".leftArrow");
+let rightArrow = document.querySelector(".rightArrow");
 
-rightArrow.addEventListener("click", () => {
+rightArrow.addEventListener('click', () => {
+  console.log(`scrollwidth ${fila.scrollWidth} clientwidtg ${fila.clientWidth} `);
 if (Number.isInteger(fila.scrollLeft / card.offsetWidth)) {
-(fila.scrollLeftMax - fila.scrollLeft >= card.offsetWidth) ? fila.scrollLeft += card.offsetWidth : fila.scrollLeft = 0;
+(fila.scrollWidth - fila.clientWidth - fila.scrollLeft >= card.offsetWidth) ? fila.scrollLeft += card.offsetWidth : fila.scrollLeft = 0;
   }
 });
 
-leftArrow.addEventListener("click", () => {
-  if (isInteger(fila.scrollLeft / card.offsetWidth)) fila.scrollLeft -= card.offsetWidth;
+
+leftArrow.addEventListener('click', () => {
+  if (Number.isInteger(fila.scrollLeft / card.offsetWidth)) fila.scrollLeft -= card.offsetWidth;
 });
 
 
