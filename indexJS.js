@@ -5,13 +5,13 @@ let paletaColores = ["005F73", "0A9396", "94D2BD", "E9D8A6", "EE9B00", "CA6702",
 
 // for heading
 // window.onload = windowWidthChange;
-$(window).on("load", function(){
+$(window).on("load", function () {
   if (window.innerWidth < 992) {
     //Update Navbar shadow
     $(".navbar").css({
       backgroundColor: `rgba(52,58,64, 1)`
     });
-}
+  }
 });
 
 
@@ -86,15 +86,15 @@ const leftArrow = document.querySelector("#leftArrow");
 const rightArrow = document.querySelector("#rightArrow");
 
 rightArrow.addEventListener("click", () => {
-  console.log(`scrollLeft ${fila.scrollLeft}, offsetwidth ${card.offsetWidth}, scrollLeftMax${fila.scrollLeftMax}`);
-if(Number.isInteger(fila.scrollLeft / card.offsetWidth))
-(fila.scrollLeft + card.offsetWidth <= fila.scrollLeftMax+1) ? fila.scrollLeft = fila.scrollLeft + card.offsetWidth :
-fila.scrollLeft = 0;
+  console.log(`scrollLeft + offsetwidth ${fila.scrollLeft + card.offsetWidth}, scrollLeftMax${fila.scrollLeftMax}`);
+  if (Number.isInteger(fila.scrollLeft / card.offsetWidth)) {
+(fila.scrollLeftMax - fila.scrollLeft >= card.offsetWidth) ? fila.scrollLeft += card.offsetWidth : fila.scrollLeft = 0;
+  }
 });
 
 leftArrow.addEventListener("click", () => {
   console.log("before", fila.scrollLeft, card.offsetWidth);
-  if(Number.isInteger(fila.scrollLeft / card.offsetWidth)) fila.scrollLeft -= card.offsetWidth;
+  if (Number.isInteger(fila.scrollLeft / card.offsetWidth)) fila.scrollLeft -= card.offsetWidth;
   console.log("after", fila.scrollLeft, card.offsetWidth);
 });
 
@@ -115,7 +115,7 @@ function windowScrollChange(evento) {
       display: "none",
     });
 
-       //Código para el parallax del Showcase
+    //Código para el parallax del Showcase
     $(".parallax").css({
       top: "0 px",
     });
@@ -217,7 +217,7 @@ function windowWidthChange(evento) {
       display: "none",
     });
 
-      //Update Navbar shadow
+    //Update Navbar shadow
     $(".navbar").css({
       backgroundColor: `rgba(52,58,64, 1)`
     });
