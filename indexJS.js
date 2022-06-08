@@ -86,7 +86,8 @@ const leftArrow = document.querySelector("#leftArrow");
 const rightArrow = document.querySelector("#rightArrow");
 
 rightArrow.addEventListener("click", () => {
-if(fila.scrollLeft + card.offsetWidth <= fila.scrollLeftMax){ 
+  console.log(`scrollLeft ${fila.scrollLeft}, offsetwidth ${card.offsetWidth}, scrollLeftMax${fila.scrollLeftMax}`);
+if(fila.scrollLeft + card.offsetWidth <= fila.scrollLeftMax+1){ 
 if(Number.isInteger(fila.scrollLeft / card.offsetWidth)) fila.scrollLeft = fila.scrollLeft + card.offsetWidth;
 }else{
 fila.scrollLeft = 0;
