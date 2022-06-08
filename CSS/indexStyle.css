@@ -201,7 +201,7 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
   margin: 6rem auto;
 }
 
-.publicaciones h5{
+.publicaciones h5 {
   text-align: center;
 }
 
@@ -353,6 +353,7 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
 
 .range .yellow {
   color: #c2a476;
+  font-weight: 700;
 }
 
 .description {
@@ -364,13 +365,21 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
   font-size: 0.9rem;
 }
 
+.cardMore {
+  width: 100%;
+}
+
 .cardMore a {
-  color: var(--gray-700)
+  color: var(--gray-700);
+font-weight: 900;
+  margin-left: 1rem;
+
+  font-size: 0.9rem;
 }
 
 .cardMore a:hover {
   color: #c2a476;
-  transform: scale(0.8);
+  /* transform: scale(0.8); */
 }
 
 .cardMore a:hover::after {
@@ -780,9 +789,10 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
     margin: 3rem auto;
   }
 
-  .mainContainer{
+  .mainContainer {
     padding-top: 2rem;
   }
+
   .mainContainer .leftArrow,
   .mainContainer .rightArrow {
     width: 35px;
@@ -795,7 +805,7 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
   .mainContainer .leftArrow {
     left: 30px;
   }
-  
+
   .mainContainer .rightArrow {
     right: 30px;
   }
