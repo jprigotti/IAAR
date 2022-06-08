@@ -84,12 +84,15 @@ let card = document.querySelector(".card");
 
 let leftArrow = document.querySelector(".leftArrow");
 let rightArrow = document.querySelector(".rightArrow");
+let scrollWidhMaxCalc = function(){
+return(fila.scrollWidth-fila.clientWidth);
+} 
 
 rightArrow.addEventListener('click', () => {
-  console.log(`scrollwidth ${fila.scrollWidth} clientwidtg ${fila.clientWidth} `);
+  console.log(`scrollLeft ${fila.scrollLeft}`);
 if (Number.isInteger(fila.scrollLeft / card.offsetWidth)) {
-(fila.scrollWidth - fila.clientWidth - fila.scrollLeft >= card.offsetWidth) ? fila.scrollLeft += card.offsetWidth : fila.scrollLeft = 0;
-  }
+(scrollWidhMaxCalc() - fila.scrollLeft >= card.offsetWidth) ? fila.scrollLeft += card.offsetWidth : fila.scrollLeft = 0;
+}
 });
 
 
