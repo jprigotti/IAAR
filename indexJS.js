@@ -90,13 +90,13 @@ rightArrow.addEventListener("click", () => {
 if(Number.isInteger(fila.scrollLeft / card.offsetWidth))
 (fila.scrollLeft + card.offsetWidth <= fila.scrollLeftMax+1) ? fila.scrollLeft = fila.scrollLeft + card.offsetWidth :
 fila.scrollLeft = 0;
-})
+});
 
 leftArrow.addEventListener("click", () => {
   console.log("before", fila.scrollLeft, card.offsetWidth);
   if(Number.isInteger(fila.scrollLeft / card.offsetWidth)) fila.scrollLeft -= card.offsetWidth;
   console.log("after", fila.scrollLeft, card.offsetWidth);
-})
+});
 
 
 function windowScrollChange(evento) {
