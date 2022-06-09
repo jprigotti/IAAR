@@ -281,6 +281,7 @@ y le aplicamos un rgba negro con un alpha de 0.5*/
   cursor: pointer;
   transition: 0.3s ease all;
   border: none;
+  min-width: 25%;
 }
 
 .publicaciones .card:hover {
@@ -635,6 +636,27 @@ font-weight: 900;
   color: var(--gray-500);
 }
 
+.credits .containerCredits{
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--gray-900);
+  color: #c2a476;
+}
+
+.containerCredits h6{
+  margin-right: 2rem;
+  padding: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.containerCredits a{
+  text-decoration: none;
+  color: #c2a476;
+}
+
+.containerCredits a:hover{
+  color: var(--gray-300);
+}
 
 /* ****************************************************** */
 /* MEDIA QUERIES */
@@ -650,7 +672,10 @@ font-weight: 900;
   /* SHOWCASE */
 
 
-  /* SPEAKERS */
+  /* PUBLICACIONES */
+  .publicaciones .card{
+    min-width: 100%;
+  }
 
   /*EXPOSICIONES VIRTUALES */
   .parallax2 {
@@ -699,7 +724,9 @@ font-weight: 900;
   /* SHOWCASE */
 
 
-  /* SPEAKERS */
+  .publicaciones .card{
+    min-width: 100%;
+  }
 
   /* EXPOSICIONES VIRTUALES */
   .parallax2 {
@@ -787,6 +814,10 @@ font-weight: 900;
   .publicaciones {
     width: 90%;
     margin: 3rem auto;
+  }
+
+  .publicaciones .card{
+    min-width: 100%;
   }
 
   .mainContainer {

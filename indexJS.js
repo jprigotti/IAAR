@@ -6,6 +6,11 @@ let paletaColores = ["005F73", "0A9396", "94D2BD", "E9D8A6", "EE9B00", "CA6702",
 // for heading
 // window.onload = windowWidthChange;
 $(window).on("load", function () {
+
+  //Inicializamos el scroll del carousel, de lo contrario en la carga pueden superponerse las cards
+  document.querySelector(".containerCarousel").scrollLeft=0;
+
+  //Set navbar background color en mode responsive
   if (window.innerWidth < 992) {
     //Update Navbar shadow
     $(".navbar").css({
@@ -429,7 +434,8 @@ function compressDrowpdownMenu() {
 //   });
 // }
 
-// CODIGO PARA EL FORM DE CONTACT
+
+// CODIGO PARA EL FORM DE CONTACTO
 $('form.ajax').submit(function (evento) {
 
   evento.preventDefault();  // avoid to execute the actual submit of the form.
