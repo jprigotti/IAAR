@@ -105,7 +105,7 @@ body li {
 .parallax {
   position: relative;
   /*para que funcione el parallax*/
-  background-image: url(../images/lolaMora.jpg);
+  background-image: url(../images/portadaLibertadTucuman.jpg);
   /*cargamos la imagen del parallax*/
   background-size: cover;
   /*le damos formato cover*/

@@ -10,6 +10,8 @@ jQuery(function($) {
         dateLocale: "es",
         layoutTemplate: "<div class='feed-container'>{entries}</div>",
         entryTemplate: '<li><a href="{url}" target="_blank" >{title}</a><br/>{author} - {date}<br/>{shortBodyPlain}</li>',
+
+        order: "-publishedDate",
     });
   });
 

@@ -19,10 +19,13 @@ $(window).on("load", function () {
   }
 });
 
+$(window).on("load",windowScrollChange);
+$(window).resize(windowWidthChange);
+
 
 window.onload = updateCarouselSeparator;
 $(window).scroll(windowScrollChange);
-window.addEventListener('resize', windowWidthChange);
+//window.addEventListener('resize', windowWidthChange);
 
 //Update the paleta de colores
 function updateCarouselSeparator() {
@@ -179,7 +182,7 @@ function windowScrollChange(evento) {
 
 
     $(".navbar img").css({
-      width: `${100 * (1 - (a / b))}`,
+      width: `${140 * (1 - (a / b))}`,
       transform: `translateX(-${a / 3}px)`
     });
 
@@ -204,7 +207,7 @@ function windowScrollChange(evento) {
 
 
     $(".navbar img").css({
-      width: `${100 * (1 - (a / b))}`,
+      width: `${180 * (1 - (a / b))}`,
       transform: `translateX(-${a / 3}px)`
     });
 
@@ -290,7 +293,7 @@ function windowWidthChange(evento) {
 
 
     $(".navbar img").css({
-      width: `${100 * (1 - (a / b))}`,
+      width: `${140 * (1 - (a / b))}`,
       transform: `translateX(-${a / 3}px)`
     });
 
@@ -303,7 +306,7 @@ function windowWidthChange(evento) {
     });
 
   } else {
-    // MEDIA QUERY > 992//
+    // MEDIA QUERY > 1420//
 
     $(".navbarImg").css({
       display: "contents",
@@ -315,7 +318,7 @@ function windowWidthChange(evento) {
 
 
     $(".navbar img").css({
-      width: `${100 * (1 - (a / b))}`,
+      width: `${180 * (1 - (a / b))}`,
       transform: `translateX(-${a / 3}px)`
     });
 
