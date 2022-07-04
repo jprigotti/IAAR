@@ -8,9 +8,9 @@ jQuery(function($) {
         encoding: "UTF-8",
         dateFormat: 'DD MM YYYY',
         dateLocale: "es",
-        layoutTemplate: "<div class='feed-container'>{entries}</div>",
-        entryTemplate: '<li><a href="{url}" target="_blank" >{title}</a><br/>{author} - {date}<br/>{shortBodyPlain}</li>',
-
+        layoutTemplate: "<div>{entries}</div>",
+        //entryTemplate: '<li class="blog_card"><a class="blog_title" href="{url}" target="_blank" >{title}</a><br/>{author} - {date}<br/>{shortBodyPlain}</li>',
+        entryTemplate: '<li class="blog_card"><a class="card_title" href="{url}" target="_blank" >{title}</a><p class="card_date">{author} - {date}</p><p class="card_body">{shortBodyPlain}</p></li>',
         order: "-publishedDate",
     });
   });

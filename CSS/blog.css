@@ -99,11 +99,11 @@ body li {
 
 
 /* MAIN */
-.institucional {
+.restauraciones {
 margin-top: 8rem;
 }
 
-.institucional .container{
+.restauraciones .container{
 width: 70%;
 max-width: 1000px;
 }
@@ -121,47 +121,44 @@ margin-bottom: 1rem;
 text-align: justify;
 }
 
-.autoridades{
-  width: 100%;
-margin-bottom: 3rem;
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;
-justify-content: center;
+.container .blog_container{
+  
+  padding: 2rem;
+  margin-bottom: 2rem;
 }
 
-.autoridades h3{
-  margin-top: 1.5rem;
- margin-bottom: 0.3rem;
- margin-left: 3rem;
-font-size: 1.3rem;
+.blog_container .blog_card{
+  border: 1px solid var(--gray-200);
+  border-left: 10px solid #4F98B8;
+  border-radius: 5px;
+  box-shadow: 10px 5px 5px var(--gray-400);
+margin: 1rem;
+padding: 0.5rem;
+}
+
+.blog_container .blog_card:hover{
+  transform: scale(0.99);
+}
+
+.blog_container .blog_card a{
+font-size: 1.5rem;
+color: #4F98B8;
 font-weight: 600;
-color: var(--gray-600);
 }
 
-.autoridades p{
-  margin: 0 0 0 4rem;
-  padding: 0;
-}
-
-.autoridades .email,
-.autoridades .linkedin{
-  display: inline-block;
-}
-
-.autoridades .email a,
-.autoridades .linkedin a {
-  color: var(--gray-600);
-  margin-left: 0.5rem;
-}
-
-.autoridades .email a:hover,
-.autoridades .linkedin a:hover{
+.blog_container .blog_card a:hover{
+  font-size: 1.5rem;
   color: #c2a476;
+  }
+
+/*.blog_container .blog_card p{*/
+  .blog_container .card_date{
+  color: var(--gray-600);
 }
 
-
-
+.blog_container .card_body{
+  color: var(--gray-800);
+}
 
 /* FOOTER */
 
