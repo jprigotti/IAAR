@@ -570,3 +570,8 @@ function updateSubmitButton() {
 //     backgroundColor: "#fcfcfc",
 //   });
 // }
+
+//Estas lineas son para que el Hamburguer menu se comprima cuando el href es a un # de la misma página
+$(".navbar-nav>li>a").on("click", function(){
+  $('#navbarNavDropdown').removeClass('show');
+  });
