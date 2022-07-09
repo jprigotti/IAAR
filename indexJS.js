@@ -3,8 +3,8 @@
 let paletaColores = ["005F73", "0A9396", "94D2BD", "E9D8A6", "EE9B00", "CA6702", "BB3E03", "AE2012", "9B2226"];
 
 
-// for heading
-// window.onload = windowWidthChange;
+/*for heading
+window.onload = windowWidthChange;*/
 $(window).on("load", function () {
 
   //Inicializamos el scroll del carousel, de lo contrario en la carga pueden superponerse las cards

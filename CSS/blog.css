@@ -134,6 +134,7 @@ text-align: justify;
   box-shadow: 10px 5px 5px var(--gray-400);
 margin: 1rem;
 padding: 0.5rem;
+position: ;
 }
 
 .blog_container .blog_card:hover{

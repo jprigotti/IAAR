@@ -1,0 +1,470 @@
+:root {
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+  --menu-color: rgba(255, 255, 255, .55);
+  --footerColor: #3d3d3d;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* font-size: 62.5%; */
+  scroll-behavior: smooth;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body ul {
+  padding: 0;
+}
+
+body li {
+  list-style: none;
+}
+
+.separador {
+  background-color: #c2a476;
+  height: 1px;
+  width: 100px;
+  margin: 2rem auto;
+}
+
+/* NAVBAR FROM BOOTSTAP */
+
+.navbar {
+  background-color: rgba(52,58,64, 1);
+}
+
+/*El es container principal dentro del Nav */
+.container-fluid {
+  width: 90% !important;
+
+}
+
+/* Div container del nav menu */
+#navbarNavDropdown {}
+
+/* Para darle el tamaño inicial a la imagen */
+.navbarImg img {
+  width: 100px;
+}
+
+/* La class del ul */
+.navbar .navbar-nav {
+  /*height: 20px; para que el nav-item no se mueve al expandir el dropdown-menu */
+  text-align: center;
+  /*para que los items queden alineados en el menú hamburguesa */
+  margin-top: 1rem;
+}
+
+.nav-item .nav-link {
+  color: var(--gray-100) !important;
+  margin-right: 1rem;
+  /*separamos un poquito los nav items*/
+  margin-bottom: 1rem;
+}
+
+.nav-item .nav-link:hover {
+  color: #c2a476 !important;
+}
+
+.nav-item .nav-link.active {
+  color: #c2a476 !important;
+}
+
+/*ocultamos el dropdown menu 1 al cargar la web*/
+.dropDown1 {
+  display: none;
+}
+
+/*le aplicamos estilo a los sub-items*/
+.dropDown1 li {
+  color: var(--gray-100);
+  background-color: var(--footerColor);
+  padding: 0.5rem;
+}
+
+
+/* MAIN */
+.exposiciones {
+width: 90vw;
+max-width: 1400px;
+margin: 0 auto;
+
+padding-top: 8rem;
+
+
+}
+
+.exposiciones .container{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+padding: 1rem;
+
+width: 100%;
+height: 100%;
+
+}
+
+.exposiciones .container .container-imagen{
+    width: 45%;
+    min-width: 500PX;
+    background-color: var(--gray-200);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+
+
+}
+
+.exposiciones .container .container-imagen .imagen{
+width: 90%;
+position: relative;
+
+}
+
+.exposiciones .container-imagen .imagen img{
+  width: 100%;
+}
+
+.container .container-imagen .imagen .overlay{
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+transition: 0.5s;
+
+}
+
+.container .container-imagen .imagen .overlay:hover{
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+.container .container-imagen .imagen .overlay .description{
+  color: #ffffff;
+  padding-top: 2rem;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.container .container-imagen .imagen .overlay .description:hover{
+  color: transparent;
+  transition: 0.5s;
+}
+
+/*.container .imagen{
+  background-image: url(../images/cristo_pintura.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 30%;
+  height: 300px;
+  border: 1px solid black;
+}*/
+
+.container .shadow{
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+
+}
+
+
+
+/* FOOTER */
+
+.footer {
+  background-color: var(--footerColor);
+  color: var(--gray-200);
+}
+
+.containerFooter {
+  width: 70%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+
+.footerLogo {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.footerLogoSocial{
+margin: 1rem ;
+}
+
+.footerLogoSocial a{
+  margin: 0 0.3rem ;
+  color: var(--gray-200);
+  }
+
+.footerSocial {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+}
+
+.footerSocial a,
+.footerNav a {
+  font-size: 0.9rem;
+  color: var(--gray-200);
+}
+
+.footerSocial li,
+.footerNav li {
+  padding-top: 5px;
+}
+
+.footerSocial a:hover,
+.footerNav a:hover {
+  color: #c2a476;
+}
+
+
+.footerNav {
+margin-top: 1rem;
+}
+
+.footerLogo img {
+  width: 100px;
+}
+
+.footer .container-footer a {
+  text-decoration: none;
+  color: var(--gray-200);
+  padding: 3rem 0;
+  width: 100px;
+  text-align: center;
+}
+
+.footer .container-footer a:hover {
+  color: var(--gray-500);
+}
+
+
+/* ****************************************************** */
+/* MEDIA QUERIES */
+/* ****************************************************** */
+
+/* MEDIA QUERIES LG 992*/
+@media(max-width: 992px) {
+
+  /* NAVBAR FROM BOOTSTAP */
+
+
+
+  /* SHOWCASE */
+
+
+  /* SPEAKERS */
+
+  /*EXPOSICIONES VIRTUALES */
+  .parallax2 {
+    background-image: url(../images/galeriaArte_16x9_1000.jpg);
+  }
+
+
+  .showcase .showcaseContent {
+    width: 100%;
+    margin-bottom: 20vh;
+    text-align: center;
+  }
+
+  .showcase .buttonarea {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .form .container-form {
+    width: 65vw;
+  }
+
+}
+
+/* CONTACTANOS */
+
+
+
+/* FOOTER */
+.footerLogoSocial{
+  display: none;
+}
+
+/* MEDIA QUERIES MD 768*/
+
+@media(max-width: 768px) {
+
+  /* NAVBAR FROM BOOTSTAP */
+  /* Para darle el tamaño inicial a la imagen */
+  .navbarImg img {
+    display: none;
+  }
+
+
+  /* SHOWCASE */
+
+
+  /* SPEAKERS */
+
+  /* EXPOSICIONES VIRTUALES */
+  .parallax2 {
+    height: 30vh;
+    background-image: url(../images/galeriaArte_16x9_1000.jpg);
+  }
+
+  /* CONTACTANOS */
+
+  .containerColumn {
+    width: 90%;
+    /* height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  }
+
+  /* FOOTER */
+
+  .containerFooter {
+    width: 90%;
+  }
+
+  .footerLogoSocial{
+    display: none;
+  }
+
+  .footerLogo img {
+    width: 70px;
+  }
+
+  .footerLogo {
+  }
+
+  .footerSocial {
+
+  }
+
+  .footerNav {
+
+  }
+
+  .container-cta {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-cta img {
+    width: 100vw;
+  }
+
+  .container-cta .cta-content>* {
+    display: block;
+    text-align: center !important;
+  }
+
+  .cta-content .btn {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .form .container-form .first-last-name {
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .form .container-form .first-last-name .input-name {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .form .container-form {
+    width: 80vw;
+  }
+
+
+}
+
+
+/* MEDIA QUERIES SM 576*/
+@media(max-width: 576px) {
+
+/* INSTITUCIONAL */
+
+.institucional .container{
+  width: 90%;
+  }
+
+  .autoridades h3{
+    margin-top: 1.5rem;
+   margin-bottom: 0.3rem;
+   margin-left: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  }
+  
+  .autoridades p{
+    margin: 0 0 0 2rem;
+    padding: 0;
+  }
+
+
+    /* CONTACTANOS */
+
+  /* FOOTER */
+  .footerSocial{
+    display: none;
+  }
+
+  .footerLogo img {
+margin-top: 1rem;
+    }
+
+  .footerLogoSocial{
+    display: contents;
+    display: flex;
+  }
+
+
+
+  .showcase .buttonarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+
+}
