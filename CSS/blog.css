@@ -45,7 +45,7 @@ body li {
 /* NAVBAR FROM BOOTSTAP */
 
 .navbar {
-  background-color: rgba(52,58,64, 1);
+  background-color: rgba(52, 58, 64, 1);
   position: relative;
 }
 
@@ -99,81 +99,81 @@ body li {
 }
 
 
-.navbar-dark .navbar-toggler{
+.navbar-dark .navbar-toggler {
   color: transparent;
   border-color: transparent;
-  }
-  
-  .navbar-dark .navbar-toggler-icon{
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28194, 164, 118, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  }
-  
-  .navbar .logoHamburguer{
-    color: #c2a476!important;
-    border: none !important;
-    font-size: 1.8rem;
-  }
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28194, 164, 118, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar .logoHamburguer {
+  color: #c2a476 !important;
+  border: none !important;
+  font-size: 1.8rem;
+}
 
 /* MAIN */
 .restauraciones {
-margin-top: 8rem;
+  margin-top: 8rem;
 }
 
-.restauraciones .container{
-width: 70%;
-max-width: 1000px;
+.restauraciones .container {
+  width: 70%;
+  max-width: 1000px;
 }
 
-.contenido h1, h2{
+.contenido h1,
+h2 {
   text-align: center;
 }
 
-.contenido h2{
-margin-bottom: 1rem;
+.contenido h2 {
+  margin-bottom: 1rem;
 }
 
-.contenido p{
+.contenido p {
   text-indent: 50px;
-text-align: justify;
+  text-align: justify;
 }
 
-.container .blog_container{
-  
+.container .blog_container {
   padding: 2rem;
   margin-bottom: 2rem;
 }
 
-.blog_container .blog_card{
+.blog_container .blog_card {
   border: 1px solid var(--gray-200);
   border-left: 10px solid #4F98B8;
   border-radius: 5px;
   box-shadow: 10px 5px 5px var(--gray-400);
-margin: 1rem;
-padding: 0.5rem;
-position: ;
+  margin: 1rem;
+  padding: 0.5rem;
+
 }
 
-.blog_container .blog_card:hover{
+.blog_container .blog_card:hover {
   transform: scale(0.99);
 }
 
-.blog_container .blog_card a{
-font-size: 1.5rem;
-color: #4F98B8;
-font-weight: 600;
+.blog_container .blog_card a {
+  font-size: 1.5rem;
+  color: #4F98B8;
+  font-weight: 600;
 }
 
-.blog_container .blog_card a:hover{
+.blog_container .blog_card a:hover {
   font-size: 1.5rem;
   color: #c2a476;
-  }
+}
 
 /*.blog_container .blog_card p{*/
-  .blog_container .card_date{
+.blog_container .card_date {
   color: var(--gray-600);
 }
 
-.blog_container .card_body{
+.blog_container .card_body {
   color: var(--gray-800);
 }
 
@@ -196,20 +196,20 @@ font-weight: 600;
 
 
 .footerLogo {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.footerLogoSocial{
-margin: 1rem ;
+.footerLogoSocial {
+  margin: 1rem;
 }
 
-.footerLogoSocial a{
-  margin: 0 0.3rem ;
+.footerLogoSocial a {
+  margin: 0 0.3rem;
   color: var(--gray-200);
-  }
+}
 
 .footerSocial {
   display: flex;
@@ -237,7 +237,7 @@ margin: 1rem ;
 
 
 .footerNav {
-margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .footerLogo img {
@@ -302,7 +302,7 @@ margin-top: 1rem;
 
 
 /* FOOTER */
-.footerLogoSocial{
+.footerLogoSocial {
   display: none;
 }
 
@@ -346,7 +346,7 @@ margin-top: 1rem;
     width: 90%;
   }
 
-  .footerLogoSocial{
+  .footerLogoSocial {
     display: none;
   }
 
@@ -354,16 +354,11 @@ margin-top: 1rem;
     width: 70px;
   }
 
-  .footerLogo {
-  }
+  .footerLogo {}
 
-  .footerSocial {
+  .footerSocial {}
 
-  }
-
-  .footerNav {
-
-  }
+  .footerNav {}
 
   .container-cta {
     display: flex;
@@ -407,43 +402,48 @@ margin-top: 1rem;
 /* MEDIA QUERIES SM 576*/
 @media(max-width: 576px) {
 
-/* INSTITUCIONAL */
+  /* INSTITUCIONAL */
 
-.institucional .container{
-  width: 90%;
+  .institucional .container {
+    width: 90%;
   }
 
-  .autoridades h3{
+  .autoridades h3 {
     margin-top: 1.5rem;
-   margin-bottom: 0.3rem;
-   margin-left: 1rem;
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--gray-600);
+    margin-bottom: 0.3rem;
+    margin-left: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--gray-600);
   }
-  
-  .autoridades p{
+
+  .autoridades p {
     margin: 0 0 0 2rem;
     padding: 0;
   }
 
 
-    /* PUBLICACIONES */
-    .restauraciones .container{
-      width: 90%;
-      max-width: 1000px;
-      }
+  /* PUBLICACIONES */
+  .restauraciones .container {
+    width: 90%;
+    max-width: 1000px;
+  }
+
+  .container .blog_container {
+    padding: 0rem;
+    margin-bottom: 2rem;
+  }
 
   /* FOOTER */
-  .footerSocial{
+  .footerSocial {
     display: none;
   }
 
   .footerLogo img {
-margin-top: 1rem;
-    }
+    margin-top: 1rem;
+  }
 
-  .footerLogoSocial{
+  .footerLogoSocial {
     display: contents;
     display: flex;
   }

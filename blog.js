@@ -2,7 +2,7 @@
 
 
 jQuery(function($) {
-    $("#divRss").rss("https://dailutb.blogspot.com/feeds/posts/default",
+    $("#divRss").rss("https://arterestauracionesfagaldemariaeugenia.blogspot.com/feeds/posts/default",
     {
         limit: 5,
         encoding: "UTF-8",
