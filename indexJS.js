@@ -8,7 +8,7 @@ window.onload = windowWidthChange;*/
 $(window).on("load", function () {
 
   //Inicializamos el scroll del carousel, de lo contrario en la carga pueden superponerse las cards
-  document.querySelector(".containerCarousel").scrollLeft=0;
+  document.querySelector(".containerCarousel").scrollLeft = 0;
 
   //Set navbar background color en mode responsive
   if (window.innerWidth < 992) {
@@ -19,7 +19,7 @@ $(window).on("load", function () {
   }
 });
 
-$(window).on("load",windowScrollChange);
+$(window).on("load", windowScrollChange);
 $(window).resize(windowWidthChange);
 
 
@@ -93,26 +93,26 @@ function cardHide(card) {
 
 let fila = document.querySelector(".containerCarousel");
 let card = document.querySelector(".card");
-let carousel = document.querySelector(".carousel") ;
+let carousel = document.querySelector(".carousel");
 
 
-let cardOffsetWidth = function(){
-  return(Math.floor(document.querySelector(".containerCarousel").scrollWidth / document.querySelector(".carousel").childElementCount));
+let cardOffsetWidth = function () {
+  return (Math.floor(document.querySelector(".containerCarousel").scrollWidth / document.querySelector(".carousel").childElementCount));
 }
 
-let scrollWidhMaxCalc = function(){
-  return(fila.scrollWidth-fila.clientWidth);
-  } 
+let scrollWidhMaxCalc = function () {
+  return (fila.scrollWidth - fila.clientWidth);
+}
 
 let leftArrow = document.querySelector(".leftArrow");
 let rightArrow = document.querySelector(".rightArrow");
 
 
 rightArrow.addEventListener('click', () => {
-console.log(fila.scrollWidth, cardOffsetWidth(), fila.scrollLeft);
-if (Number.isInteger(fila.scrollLeft / cardOffsetWidth())) {
-(scrollWidhMaxCalc() - fila.scrollLeft >= cardOffsetWidth()) ? fila.scrollLeft += cardOffsetWidth() : fila.scrollLeft = 0;
-}
+  console.log(fila.scrollWidth, cardOffsetWidth(), fila.scrollLeft);
+  if (Number.isInteger(fila.scrollLeft / cardOffsetWidth())) {
+    (scrollWidhMaxCalc() - fila.scrollLeft >= cardOffsetWidth()) ? fila.scrollLeft += cardOffsetWidth() : fila.scrollLeft = 0;
+  }
 });
 
 
@@ -572,6 +572,20 @@ function updateSubmitButton() {
 // }
 
 //Estas lineas son para que el Hamburguer menu se comprima cuando el href es a un # de la misma página
-$(".navbar-nav>li>a").on("click", function(){
+$(".navbar-nav>li>a").on("click", function () {
   $('#navbarNavDropdown').removeClass('show');
-  });
+});
+
+
+//Estas lineas son para el PopUp
+$('.openPopup').click(function (event) {
+  $('.popup').css({ 'display': 'block' });
+  $('body, html').scrollTop(0);
+
+  // $("body").css("overflow", "hidden");
+});
+
+$('.popupContainerClose').click(function (event) {
+  $('.popup').css({ 'display': 'none' });
+  $("body").css("overflow", "visible");
+});
