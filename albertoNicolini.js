@@ -1,7 +1,7 @@
 $('.buttonMaximize').click(function (event) {
+    document.querySelector("body").style.overflowY = 'hidden';
     $('body, html').scrollTop(0);
-        $('.popup').css({ 'display': 'block' });
-        $("body").css("overflow", "hidden");
+    $('.popup').css({ 'display': 'block' });
 });
 
 $('.popupContainerClose').click(function (event) {

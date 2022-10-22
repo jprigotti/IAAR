@@ -579,13 +579,13 @@ $(".navbar-nav>li>a").on("click", function () {
 
 //Estas lineas son para el PopUp
 $('.openPopup').click(function (event) {
-  $('.popup').css({ 'display': 'block' });
   $('body, html').scrollTop(0);
+  document.querySelector("body").style.overflowY = 'hidden';
+  $('.popup').css({ 'display': 'block' });
 
-  // $("body").css("overflow", "hidden");
 });
 
 $('.popupContainerClose').click(function (event) {
   $('.popup').css({ 'display': 'none' });
-  $("body").css("overflow", "visible");
+  document.querySelector("body").style.overflowY = 'visible';
 });

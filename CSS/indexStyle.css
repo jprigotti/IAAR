@@ -24,6 +24,10 @@ html {
   scroll-padding-top: 100px;  /*this line fixes this issue: When I click on a navbar link, it scrolls down and overlaps the title of each section  */
 }
 
+/* body{
+  overflow: hidden;
+} */
+
 body a,
 .cardMore a {
   text-decoration: none;
@@ -110,12 +114,12 @@ border-color: transparent;
 
 /* SHOWCASE */
 .showcase {
-  position: relative;
+  /* position: relative; */
   /*para que funcione el parallax*/
   height: 100vh;
   /*se podria omitir, porque la imagen le esta dando el alto, pero si la imagen no carga es mejor ponerlo */
   overflow: hidden;
-  /**/
+  /* z-index: 1; */
   font-size: 1rem;
   color: var(--gray-200);
 }
@@ -679,7 +683,7 @@ font-weight: 900;
 
 /* PopUp */
 .popup {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
