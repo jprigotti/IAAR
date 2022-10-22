@@ -690,7 +690,7 @@ font-weight: 900;
   left: 0;
   width: 100%;
   height: 100vh;
-  padding: 3rem;
+  padding: 3rem 0;
   background-color: rgba(0, 0, 0, .7);
   z-index: 2;
   overflow-y: scroll;
@@ -711,7 +711,7 @@ font-weight: 900;
   grid-template-rows: 50px auto;
 }
 
-.popup .container .header {
+.popup .containerHeader {
   grid-row: 1;
   align-self: center;
   justify-self: end;
@@ -727,7 +727,7 @@ font-weight: 900;
   transform: scale(0.95);
 }
 
-.popup .container .body {
+.popup .containerBody {
   grid-row: 2;
   padding: 1rem;
 }
@@ -735,7 +735,11 @@ font-weight: 900;
 .popup .container .bodyTitle{
   /* padding: 1rem; */
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  text-align: center;
+  margin-bottom: 1rem;
+
 }
 
 .popup .container .bodyImage{
@@ -786,18 +790,21 @@ font-weight: 900;
   grid-column: 3 / 13;
 }
 
-.quoteTitle h1{
+.quoteTitle h1,
+.quoteBody h1{
   font-size: 1.2rem;
   font-weight: 600;
 }
 
-.quoteTitle h2{
+.quoteTitle h2,
+.quoteBody h2{
 font-size: 1rem;
 font-style: italic;
 margin: 0;
 }
 
-.quoteTitle h3{
+.quoteTitle h3,
+.quoteBody h3{
 font-size: 0.9rem;
 }
 
